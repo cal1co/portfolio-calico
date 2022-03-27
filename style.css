@@ -1,0 +1,47 @@
+*{
+  border:1px solid slateblue;
+  margin:0;
+}
+.body{
+  height:auto;
+  
+}
+nav{
+  height:5vh;
+  position:sticky;
+  top:0;
+}
+.header-content{
+  height:65vh
+}
+canvas{
+  height:100%;
+  width:90vw;
+  position:relative;
+  left:50%;
+  transform:translateX(-50%);
+}
+canvas:hover{
+  cursor:grab;
+}
+canvas:active{
+  cursor:grabbing;
+}
+
+
+.about{
+  height:50vh;
+}
+.projects{
+  height:60vh;
+}
+.skills{
+  height:30vh;
+}
+.contact{
+  height:30vh;
+}
+
+.footer{
+  height:20vh;
+}
