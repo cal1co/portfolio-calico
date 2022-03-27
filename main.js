@@ -8,14 +8,14 @@ const canvas = document.querySelector('canvas.world')
 const params = {
     sky:{
         day:'#49C5F5',
-        night:'#000000'
+        night:'#3242F5'
     } 
 }
 
 // Scene
 const scene = new THREE.Scene()
 
-scene.background = new THREE.Color(params.sky.day)
+scene.background = new THREE.Color(params.sky.night)
 
 
 /**
