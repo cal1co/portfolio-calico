@@ -35,9 +35,6 @@ const sizes = {
     height: 10
 }
 
-
-
-
 window.addEventListener('resize', () => {
     
     // Update sizes
