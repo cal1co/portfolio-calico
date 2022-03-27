@@ -8,8 +8,9 @@ const canvas = document.querySelector('canvas.world')
 const params = {
     sky:{
         // day:'#49C5F5',
-        day:'#cccccc',
-        night:'#999999',
+        // day:'#cccccc',
+        day:'#ffffff',
+        // night:'#262926',
         // night:'#3242F5'
     }, 
     planet:{
@@ -22,13 +23,14 @@ const params = {
 // Scene
 const scene = new THREE.Scene()
 
-scene.background = new THREE.Color(params.sky.night)
+scene.background = new THREE.Color(params.sky.day)
 
 
 /**
  * Object
  */
 const geometry = new THREE.SphereGeometry(2, 128, 64)
+// const geometry = new THREE.BoxGeometry(1, 1, 1)
 const material = new THREE.MeshToonMaterial({ color: params.planet.day })
 const mesh = new THREE.Mesh(geometry, material)
 scene.add(mesh)
@@ -54,9 +56,6 @@ window.addEventListener('resize', () => {
 })
 
 
-
-
-
 const camera = new THREE.PerspectiveCamera(25, sizes.width / sizes.height, 0.1, 100)
 camera.position.z = 2.5
 camera.position.y = 2
@@ -79,37 +78,35 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 const clock = new THREE.Clock()
 
 
-// canvas.addEventListener('dblclick', () => {
+canvas.addEventListener('dblclick', () => {
 
-//     const fullscreenElement = document.fullscreenElement || document.webkitFullscreenElement
+    const fullscreenElement = document.fullscreenElement || document.webkitFullscreenElement
 
-//     if(!fullscreenElement)
-//     {
-//         if(canvas.requestFullscreen)
-//         {
-//             canvas.requestFullscreen()
-//         }
-//         else if(canvas.webkitRequestFullscreen)
-//         {
-//             canvas.webkitRequestFullscreen()
-//         }
-//     }
-//     else
-//     {
-//         if(document.exitFullscreen)
-//         {
-//             document.exitFullscreen()
-//         }
-//         else if(document.webkitExitFullscreen)
-//         {
-//             document.webkitExitFullscreen()
-//         }
-//     }
-
-
-// })
+    if(!fullscreenElement)
+    {
+        if(canvas.requestFullscreen)
+        {
+            canvas.requestFullscreen()
+        }
+        else if(canvas.webkitRequestFullscreen)
+        {
+            canvas.webkitRequestFullscreen()
+        }
+    }
+    else
+    {
+        if(document.exitFullscreen)
+        {
+            document.exitFullscreen()
+        }
+        else if(document.webkitExitFullscreen)
+        {
+            document.webkitExitFullscreen()
+        }
+    }
 
 
+})
 
 
 gsap.fromTo('nav', {opacity:0}, {opacity:0.5, duration:2})
@@ -117,21 +114,19 @@ const animation = () => {
     renderer.setSize(sizes.width, sizes.height)
     
     if (sizes.height < window.innerHeight * 0.50){
-        sizes.height = sizes.height += 5
+        sizes.height = sizes.height += 10
         camera.aspect = sizes.width / sizes.height
         camera.updateProjectionMatrix()
 
     } 
     else if (sizes.width < window.innerWidth * 0.9){
-        sizes.width = sizes.width += 6
+        sizes.width = sizes.width += 12
         camera.aspect = sizes.width / sizes.height
         camera.updateProjectionMatrix()
     }
 
 
     const elapsedTime = clock.getElapsedTime()
-    
-
 
     // controls.update()
 

@@ -5,11 +5,12 @@
 html{
   overflow-x: hidden;
 }
+
 .body{
   height:auto;
 }
 nav{
-  max-height:5vh;
+  height:5vh;
   position:sticky;
   top:0;
   z-index: 1;
@@ -52,6 +53,10 @@ canvas{
   position:relative;
   left:50%;
   transform:translateX(-50%);
+  /* border: 5px solid black; */
+  /* border-radius:200px; */
+  /* border-bottom-left-radius:300px 1000%; */
+  /* border-bottom-right-radius:300px 1000%; */
 }
 canvas:hover{
   cursor:grab;
@@ -63,7 +68,19 @@ canvas:active{
 
 .about{
   height:50vh;
+  margin-top:5vh;
+  margin-bottom:5vh;
+  outline:1px solid pink
 }
+.about-me{
+  position:relative;
+  outline: 3px solid red;
+  height:80%;
+  width:90%;
+  left:50%;
+  transform:translateX(-50%)
+}
+
 .projects{
   height:60vh;
 }
