@@ -1,4 +1,4 @@
-import './style.css'
+import '../style.css'
 import * as THREE from 'three'
 import gsap from 'gsap'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
@@ -54,7 +54,7 @@ window.addEventListener('resize', () => {
 })
 
 
-const camera = new THREE.PerspectiveCamera(25, sizes.width / sizes.height, 0.1, 100)
+const camera = new THREE.PerspectiveCamera(20, sizes.width / sizes.height, 0.1, 100)
 camera.position.z = 2.5
 camera.position.y = 2
 scene.add(camera)
@@ -107,7 +107,7 @@ canvas.addEventListener('dblclick', () => {
 })
 
 
-gsap.fromTo('nav', {opacity:0}, {opacity:0.9, duration:2})
+gsap.fromTo('nav', {opacity:0}, {opacity:1, duration:2})
 
 const animation = () => {
     renderer.setSize(sizes.width, sizes.height)

@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@500;700;900&display=swap');
 
 /* https://color.adobe.com/create/color-wheel */
+:root{
+  --theme-one:slateblue;
+}
+
 
 *{
   /* border:1px solid slateblue; */
@@ -37,7 +41,6 @@ html{
   opacity:95%;
 }
 
-
 .body{
   height:auto;
 }
@@ -47,9 +50,9 @@ nav{
   top:0;
   z-index: 999;
   background-color:white;
-  outline:1px solid slateblue;
-  border-bottom-left-radius:30px 30%;
-  border-bottom-right-radius:30px 30%;
+  /* outline:1px solid slateblue; */
+  border-bottom-left-radius:40px 10%;
+  border-bottom-right-radius:40px 10%;
   /* overflow:hidden; */
   /* display:inline-flex; */
 }
@@ -73,10 +76,10 @@ li{
   width:fit-content;
   float:left;
 }
+
 .nav-controls{
   position:relative;
   left:60vw;
-  /* right:60%; */
 }
 .nav-butt{
   position:relative;
@@ -86,10 +89,12 @@ li{
   border:none;
   margin-left:2vw;
   font-size:1rem;
+  text-decoration:underline;
 }
 .nav-butt:hover{
   cursor:pointer;
   transform:translateY(45%);
+  opacity:70%;
 }
 .nav-butt:active{
   transform:translateY(50%)
@@ -125,7 +130,7 @@ canvas{
   position:relative;
   left:50%;
   transform:translateX(-50%);
-  /* border: 5px solid black; */
+  border: 3px solid var(--theme-one);
   border-radius:80px;
   /* border-bottom-left-radius:300px 1000%; */
   /* border-bottom-right-radius:300px 1000%; */
@@ -139,19 +144,24 @@ canvas:active{
 
 
 .about{
-  height:50vh;
+  /* height:50vh; */
+  height:auto;
   margin-top:5vh;
   /* margin-bottom:5vh; */
   outline:1px solid pink
 }
 .about-me{
   position:relative;
-  outline: 3px solid red;
-  height:80%;
+  /* outline: 3px solid red; */
+  /* height:80%; */
+  height:fit-content;
   width:90%;
   left:50%;
   transform:translateX(-50%);
   overflow:hidden;
+  padding-bottom:30px;
+  padding-top:30px;
+  /* margin-bottom:5vh; */
 }
 
 .projects{
