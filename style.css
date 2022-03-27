@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@500;700;900&display=swap');
+
 *{
   /* border:1px solid slateblue; */
   margin:0;
+  font-family: 'Kumbh Sans', sans-serif;
 }
 html{
   overflow-x: hidden;
+  font-size:1rem
 }
 
 .body{
@@ -46,6 +50,20 @@ li{
 
 .header-content{
   height:50vh
+}
+.header-content > h1{
+  position:fixed;
+  z-index:2;
+  width:45vw;
+  /* top:50%; */
+
+  /* left:10% */
+}
+.header-name{
+  font-size:3rem;
+  position:relative;
+  top:10%;
+  left:5%;
 }
 canvas{
   height:100%;
