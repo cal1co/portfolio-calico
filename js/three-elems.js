@@ -107,6 +107,7 @@ canvas.addEventListener('dblclick', () => {
 
 
 gsap.fromTo('nav', {opacity:0}, {opacity:.9, duration:2})
+// gsap.fromTo('.about', {opacity:0}, {opacity:1, duration:2})
 // gsap.fromTo('.header-container', {opacity:0}, {opacity:.9, duration:3})
 
 const animation = () => {
