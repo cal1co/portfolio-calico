@@ -1,5 +1,4 @@
 import $ from 'jquery'
-console.log('helooooo', $)
 
 $(window).scroll(function(){
     let endLine = $(window).scrollTop() - 60
