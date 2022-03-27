@@ -30,6 +30,14 @@ html{
   width:52px;
   height:52px;
 }
+.go-up:hover{
+  opacity:85%;
+}
+.go-up:active{
+  opacity:95%;
+}
+
+
 .body{
   height:auto;
 }
