@@ -13,8 +13,8 @@ const scene = new THREE.Scene()
 /**
  * Object
  */
-const geometry = new THREE.BoxGeometry(1, 1, 1)
-const material = new THREE.MeshBasicMaterial({ color: 0xff0000 })
+const geometry = new THREE.SphereGeometry(2, 16, 8)
+const material = new THREE.MeshBasicMaterial({ color: 0x7EF568 })
 const mesh = new THREE.Mesh(geometry, material)
 scene.add(mesh)
 
@@ -22,7 +22,7 @@ scene.add(mesh)
 
 const sizes = {
     width: window.innerWidth * 0.45,
-    // height: window.innerHeight * 0.65
+    // height: window.innerHeight * 0.50
     height: 10
 }
 
@@ -33,7 +33,7 @@ window.addEventListener('resize', () => {
     
     // Update sizes
     sizes.width = window.innerWidth * 0.9
-    sizes.height = window.innerHeight * 0.65
+    sizes.height = window.innerHeight * 0.50
     // Update camera 
     camera.aspect = sizes.width / sizes.height
     camera.updateProjectionMatrix()
@@ -45,12 +45,12 @@ window.addEventListener('resize', () => {
 
 
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
-camera.position.z = 3
+camera.position.z = 2.5
 scene.add(camera)
 
 
-const controls = new OrbitControls(camera, canvas)
-controls.enableDamping = true
+// const controls = new OrbitControls(camera, canvas)
+// controls.enableDamping = true
 
 
 
@@ -64,17 +64,51 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 const clock = new THREE.Clock()
 
 
+// canvas.addEventListener('dblclick', () => {
+
+//     const fullscreenElement = document.fullscreenElement || document.webkitFullscreenElement
+
+//     if(!fullscreenElement)
+//     {
+//         if(canvas.requestFullscreen)
+//         {
+//             canvas.requestFullscreen()
+//         }
+//         else if(canvas.webkitRequestFullscreen)
+//         {
+//             canvas.webkitRequestFullscreen()
+//         }
+//     }
+//     else
+//     {
+//         if(document.exitFullscreen)
+//         {
+//             document.exitFullscreen()
+//         }
+//         else if(document.webkitExitFullscreen)
+//         {
+//             document.webkitExitFullscreen()
+//         }
+//     }
+
+
+// })
+
+
+
+
+gsap.fromTo('nav', {opacity:0}, {opacity:0.5, duration:2})
 const animation = () => {
     renderer.setSize(sizes.width, sizes.height)
     
-    if (sizes.height < window.innerHeight * 0.65){
-        sizes.height = sizes.height += 3.5
+    if (sizes.height < window.innerHeight * 0.50){
+        sizes.height = sizes.height += 5
         camera.aspect = sizes.width / sizes.height
         camera.updateProjectionMatrix()
 
     } 
     else if (sizes.width < window.innerWidth * 0.9){
-        sizes.width = sizes.width += 5
+        sizes.width = sizes.width += 6
         camera.aspect = sizes.width / sizes.height
         camera.updateProjectionMatrix()
     }
@@ -84,7 +118,7 @@ const animation = () => {
     
 
 
-    controls.update()
+    // controls.update()
 
     // Render
     renderer.render(scene, camera)

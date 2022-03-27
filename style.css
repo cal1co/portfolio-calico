@@ -7,12 +7,42 @@
   
 }
 nav{
-  height:5vh;
+  max-height:5vh;
   position:sticky;
   top:0;
+  z-index: 1;
+  background-color:white;
+  /* overflow:hidden; */
+  /* display:inline-flex; */
 }
+.page-controls{
+  outline:2px solid crimson;
+
+  width:auto;
+  /* height:5vh; */
+  position:relative;
+  right:50%;
+  z-index:2;
+}
+
+ul{
+  list-style-type:none;
+  margin:0;
+  padding:0;
+  overflow:hidden;
+}
+li{
+  width:fit-content;
+  float:left;
+}
+.nav-controls{
+  position:relative;
+  left:80vw;
+}
+
+
 .header-content{
-  height:65vh
+  height:50vh
 }
 canvas{
   height:100%;
