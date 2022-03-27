@@ -5,20 +5,29 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 
 
 const canvas = document.querySelector('canvas.world')
-
+const params = {
+    sky:{
+        day:'#49C5F5',
+        night:'#000000'
+    } 
+}
 
 // Scene
 const scene = new THREE.Scene()
 
+scene.background = new THREE.Color(params.sky.day)
+
+
 /**
  * Object
  */
-const geometry = new THREE.SphereGeometry(2, 16, 8)
-const material = new THREE.MeshBasicMaterial({ color: 0x7EF568 })
+const geometry = new THREE.SphereGeometry(2, 128, 64)
+const material = new THREE.MeshToonMaterial({ color: 0x3BF560 })
 const mesh = new THREE.Mesh(geometry, material)
 scene.add(mesh)
 
-
+const light = new THREE.AmbientLight()
+scene.add(light)
 
 const sizes = {
     width: window.innerWidth * 0.45,
@@ -44,8 +53,9 @@ window.addEventListener('resize', () => {
 
 
 
-const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
+const camera = new THREE.PerspectiveCamera(25, sizes.width / sizes.height, 0.1, 100)
 camera.position.z = 2.5
+camera.position.y = 2
 scene.add(camera)
 
 
@@ -59,6 +69,7 @@ const renderer = new THREE.WebGLRenderer({
 })
 renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+
 
 
 const clock = new THREE.Clock()
