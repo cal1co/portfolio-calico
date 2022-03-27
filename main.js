@@ -7,9 +7,16 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 const canvas = document.querySelector('canvas.world')
 const params = {
     sky:{
-        day:'#49C5F5',
-        night:'#3242F5'
-    } 
+        // day:'#49C5F5',
+        day:'#cccccc',
+        night:'#999999',
+        // night:'#3242F5'
+    }, 
+    planet:{
+        // day:'0x3BF560',
+        day:'#eeaaff',
+        // night:
+    }
 }
 
 // Scene
@@ -22,7 +29,7 @@ scene.background = new THREE.Color(params.sky.night)
  * Object
  */
 const geometry = new THREE.SphereGeometry(2, 128, 64)
-const material = new THREE.MeshToonMaterial({ color: 0x3BF560 })
+const material = new THREE.MeshToonMaterial({ color: params.planet.day })
 const mesh = new THREE.Mesh(geometry, material)
 scene.add(mesh)
 

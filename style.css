@@ -1,10 +1,12 @@
 *{
-  border:1px solid slateblue;
+  /* border:1px solid slateblue; */
   margin:0;
+}
+html{
+  overflow-x: hidden;
 }
 .body{
   height:auto;
-  
 }
 nav{
   max-height:5vh;
