@@ -3,7 +3,6 @@ import * as THREE from 'three'
 import gsap from 'gsap'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 
-
 const canvas = document.querySelector('canvas.world')
 const params = {
     sky:{
@@ -107,7 +106,7 @@ canvas.addEventListener('dblclick', () => {
 })
 
 
-gsap.fromTo('nav', {opacity:0}, {opacity:1, duration:2})
+gsap.fromTo('nav', {opacity:0}, {opacity:.9, duration:2})
 
 const animation = () => {
     renderer.setSize(sizes.width, sizes.height)
