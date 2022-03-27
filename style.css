@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@500;700;900&display=swap');
 
+/* https://color.adobe.com/create/color-wheel */
+
 *{
   /* border:1px solid slateblue; */
   margin:0;
@@ -7,9 +9,27 @@
 }
 html{
   overflow-x: hidden;
-  font-size:1rem
+  font-size:1rem;
+  scroll-behavior: smooth;
 }
-
+.go-up{
+  position:fixed;
+  top:85%;
+  left:85vw;
+  border:3px solid slateblue;
+  background-color:slateblue;
+  opacity: 95%;
+  border-radius:50%;
+  padding-right:12px;
+  padding-left:12px;
+  /* padding-top:5px; */
+  /* font-size:2rem; */
+  user-select:none;
+  color:white;
+  cursor:pointer;
+  width:52px;
+  height:52px;
+}
 .body{
   height:auto;
 }
@@ -17,8 +37,11 @@ nav{
   height:5vh;
   position:sticky;
   top:0;
-  z-index: 1;
+  z-index: 999;
   background-color:white;
+  outline:1px solid slateblue;
+  border-bottom-left-radius:30px 30%;
+  border-bottom-right-radius:30px 30%;
   /* overflow:hidden; */
   /* display:inline-flex; */
 }
@@ -36,7 +59,7 @@ ul{
   list-style-type:none;
   margin:0;
   padding:0;
-  overflow:hidden;
+  /* overflow:hidden; */
 }
 li{
   width:fit-content;
@@ -44,27 +67,50 @@ li{
 }
 .nav-controls{
   position:relative;
-  left:80vw;
+  left:60vw;
+  /* right:60%; */
+}
+.nav-butt{
+  position:relative;
+  top:50%;
+  transform:translateY(50%);
+  background:none;
+  border:none;
+  margin-left:2vw;
+  font-size:1rem;
+}
+.nav-butt:hover{
+  cursor:pointer;
+  transform:translateY(45%);
+}
+.nav-butt:active{
+  transform:translateY(50%)
 }
 
 
 .header-content{
   height:50vh
 }
-.header-content > h1{
-  position:fixed;
+.header-container{
+  position:absolute;
   z-index:2;
-  width:45vw;
-  /* top:50%; */
-
-  /* left:10% */
+  width:20vw;
+  top:20%;
+  left:10%;
 }
 .header-name{
-  font-size:3rem;
+  font-size:clamp(2rem, 7vw, 3rem);
   position:relative;
-  top:10%;
-  left:5%;
+  /* top:20%; */
+  /* left:10%; */
 }
+.header-tag{
+  /* top:35%; */
+  /* left:10%; */
+  font-size:clamp(0.6rem, 3vw, 1.2rem);
+}
+
+
 canvas{
   height:100%;
   width:90vw;
@@ -72,7 +118,7 @@ canvas{
   left:50%;
   transform:translateX(-50%);
   /* border: 5px solid black; */
-  /* border-radius:200px; */
+  border-radius:80px;
   /* border-bottom-left-radius:300px 1000%; */
   /* border-bottom-right-radius:300px 1000%; */
 }
@@ -87,7 +133,7 @@ canvas:active{
 .about{
   height:50vh;
   margin-top:5vh;
-  margin-bottom:5vh;
+  /* margin-bottom:5vh; */
   outline:1px solid pink
 }
 .about-me{
@@ -96,7 +142,8 @@ canvas:active{
   height:80%;
   width:90%;
   left:50%;
-  transform:translateX(-50%)
+  transform:translateX(-50%);
+  overflow:hidden;
 }
 
 .projects{

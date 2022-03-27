@@ -18,10 +18,14 @@
 
       </div>
       <ul class="nav-controls">
-        <li class="nav-about">about</li>
-        <li class="nav-projects">projects</li>
-        <li class="nav-skills">skills</li>
-        <li class="nav-contact">contact</li>
+        <li class="nav-about"> <button class="nav-butt" onclick="location.href='#about'">about</button></li>
+
+        <li class="nav-skills"> <button class="nav-butt" onclick="location.href='#skills'">skills</button></li>
+
+        <li class="nav-projects"> <button class="nav-butt" onclick="location.href='#projects'">projects</button></li>
+
+        <li class="nav-contact"><button class="nav-butt" onclick="location.href='#contact'">contact</button></li>
+
       </ul>
 
       <!-- <div class="page-controls">
@@ -37,12 +41,15 @@
     </nav>
 
     <div class="header-content">
-      <h1 class="header-name">Alex King</h1>
+      <div class="header-container">
+        <h1 class="header-name">Alex King</h1>
+        <h1 class="header-tag">Fullstack developer</h1>
+      </div>
 
       <canvas class="world"></canvas>
     </div>
     <div class="body">
-      <div class="about">
+      <div class="about" id="about">
         about
         <p class="about-me">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod consequatur, optio dolorem
           beatae placeat doloremque labore? Voluptatibus consequuntur, rerum voluptatem nam magni, eligendi perferendis
@@ -60,12 +67,12 @@
           Suscipit voluptas placeat enim rem natus quisquam!</p>
       </div>
 
-      <div class="skills">
+      <div class="skills" id="skills">
         skills
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id doloribus ipsum iure accusamus laborum. Error esse minus pariatur aliquid incidunt eligendi, nihil, laboriosam aperiam vero, itaque totam. Debitis itaque quo illum laboriosam, sed aperiam ipsum nesciunt nemo architecto tempora ab, ipsam molestiae, at fuga magnam ullam odio voluptates sapiente fugiat.</p>
       </div>
 
-      <div class="projects">
+      <div class="projects" id="projects">
         projects
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod consequatur, optio dolorem
           beatae placeat doloremque labore? Voluptatibus consequuntur, rerum voluptatem nam magni, eligendi perferendis
@@ -83,7 +90,7 @@
           Suscipit voluptas placeat enim rem natus quisquam!</p>
       </div>
 
-      <div class="contact">
+      <div class="contact" id="contact">
         contact
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, optio illo temporibus quibusdam tenetur, aliquam cupiditate inventore odit ab asperiores tempora quo consectetur dolore voluptatem quae facilis aliquid ullam alias soluta officiis sed corporis sunt iusto! Perspiciatis ad nihil sunt, voluptates corporis dolore tempora error autem libero quos expedita ab magni adipisci minima, sequi quis eaque. In ipsam modi ducimus eos aspernatur nobis omnis doloremque animi nisi, blanditiis perferendis tempore cum culpa distinctio nam nihil. Eius tenetur earum esse repudiandae?</p>
       </div>
@@ -91,8 +98,16 @@
     <div class="footer">
       footer
     </div>
+
+    <!-- <div class="go-up">
+      ^
+    </div> -->
+
+    <button class="go-up" onclick="location.href='#app'">up</button>
+
+
   </div>
-  <script type="module" src="/main.js"></script>
+  <script type="module" src="/three-elems.js"></script>
 </body>
 
 </html>

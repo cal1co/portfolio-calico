@@ -22,16 +22,14 @@ const params = {
 
 // Scene
 const scene = new THREE.Scene()
-
 scene.background = new THREE.Color(params.sky.day)
-
 
 /**
  * Object
  */
 const geometry = new THREE.SphereGeometry(2, 128, 64)
 // const geometry = new THREE.BoxGeometry(1, 1, 1)
-const material = new THREE.MeshToonMaterial({ color: params.planet.day })
+const material = new THREE.MeshToonMaterial({ color: params.planet.day, wireframe:true })
 const mesh = new THREE.Mesh(geometry, material)
 scene.add(mesh)
 
@@ -109,7 +107,8 @@ canvas.addEventListener('dblclick', () => {
 })
 
 
-gsap.fromTo('nav', {opacity:0}, {opacity:0.5, duration:2})
+gsap.fromTo('nav', {opacity:0}, {opacity:0.9, duration:2})
+
 const animation = () => {
     renderer.setSize(sizes.width, sizes.height)
     
