@@ -13,14 +13,15 @@ $(window).scroll(function(){
         $(".nav-skills").children().addClass('selected')
         $(".nav-projects").children().removeClass('selected')
         $(".nav-contact").children().removeClass('selected')
-        $(".my-skills").addClass('drop')
+        // $(".my-skills").addClass('drop')
+        // $(".my-projects").addClass('drop')
 
     } else if ($("#projects").offset().top > endLine) {
         $(".nav-about").children().removeClass('selected')
         $(".nav-skills").children().removeClass('selected')
         $(".nav-projects").children().addClass('selected')
         $(".nav-contact").children().removeClass('selected')
-        $(".my-projects").addClass('drop')
+        
 
     } else if ($("#contact").offset().top > endLine) {
         $(".nav-about").children().removeClass('selected')
