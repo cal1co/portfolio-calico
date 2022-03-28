@@ -1,9 +1,5 @@
 import $ from 'jquery'
 
-let one = false
-let two = false
-let three = false
-let four = false
 
 $(window).scroll(function(){
     let endLine = $(window).scrollTop() - 60

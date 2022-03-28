@@ -289,12 +289,12 @@ ABOUT
     "about1 about2 about3"
     "about4 about5 about6"; 
 }
-.about1 { grid-area: about1; }
-.about2 { grid-area: about2; }
-.about3 { grid-area: about3; }
-.about4 { grid-area: about4; }
-.about5 { grid-area: about5; }
-.about6 { grid-area: about6; }
+.about1 { grid-area: about1; animation:basic-drop .6s linear;}
+.about2 { grid-area: about2; animation:basic-drop 1s linear;}
+.about3 { grid-area: about3; animation:basic-drop 1.4s linear;}
+.about4 { grid-area: about4; animation:basic-drop .6s linear;}
+.about5 { grid-area: about5; animation:basic-drop 1s linear;}
+.about6 { grid-area: about6; animation:basic-drop 1.4s linear;}
 .about-grid > * {
   width:auto;
   position:relative;
@@ -314,8 +314,12 @@ ABOUT
 }
 .about-items{
   font-size:clamp(1.3rem, 3vw, 1.8rem);
+  font-weight:200;
 }
-
+.about-exp{
+  width:25ch;
+  text-align:center;
+}
 
 
 
