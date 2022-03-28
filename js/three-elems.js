@@ -104,7 +104,7 @@ canvas.addEventListener('dblclick', () => {
 })
 
 
-gsap.fromTo('nav', {opacity:0}, {opacity:.9, duration:2})
+gsap.fromTo('nav', {opacity:0}, {opacity:0.9, duration:2})
 // gsap.fromTo('.about', {opacity:0}, {opacity:1, duration:2})
 // gsap.fromTo('.header-container', {opacity:0}, {opacity:.9, duration:3})
 
@@ -164,9 +164,16 @@ $(".go-up").on('click', function(){
 let darkmode = (env) => {
     if (env){ // light
         $('body').addClass('dark-body')
+        $('.nav-butt').css('color', 'white')
+        // $(".go-up").css('background-color', 'white')
+        $('nav').css('background', 'black')
         scene.background = new THREE.Color(params.sky.night)
     } else { // dark
         $('body').removeClass('dark-body')
+        $('.nav-butt').css('color', 'black')
+        // $(".go-up").css('background-color', 'black')
+        $('nav').css('background', 'white')
+
         scene.background = new THREE.Color(params.sky.day)
 
     }

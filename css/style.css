@@ -37,10 +37,6 @@ body{
   background-color:white;
   opacity: 95%;
   border-radius:50%;
-  /* padding-right:12px;
-  padding-left:12px; */
-  /* padding-top:5px; */
-  /* font-size:2rem; */
   user-select:none;
   color:white;
   cursor:pointer;
@@ -105,12 +101,9 @@ nav{
   position:sticky;
   top:0;
   z-index: 999;
-  background-color:white;
-  /* outline:1px solid slateblue; */
   border-bottom-left-radius:40px 10%;
   border-bottom-right-radius:40px 10%;
-  /* overflow:hidden; */
-  /* display:inline-flex; */
+  background:white;
 }
 .page-controls{
   outline:2px solid crimson;
