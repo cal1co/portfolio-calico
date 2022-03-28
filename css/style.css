@@ -21,19 +21,21 @@ html{
   position:fixed;
   top:85%;
   left:85vw;
-  border:3px solid slateblue;
-  background-color:slateblue;
+  border:3px solid white;
+  /* border:none; */
+  background-color:white;
   opacity: 95%;
   border-radius:50%;
-  padding-right:12px;
-  padding-left:12px;
+  /* padding-right:12px;
+  padding-left:12px; */
   /* padding-top:5px; */
   /* font-size:2rem; */
   user-select:none;
   color:white;
   cursor:pointer;
-  width:52px;
-  height:52px;
+  width:70px;
+  height:70px;
+  overflow:hidden;
 }
 .go-up:hover{
   opacity:85%;
@@ -41,7 +43,49 @@ html{
 .go-up:active{
   opacity:95%;
 }
+.sun-icon, .moon-icon{
+  position:relative;
+  transform:translateY(50%);
+  top:4%;
+  height:52px;
+  width:52px;
+  color:slateblue;
+  /* animation:sun-moon .3s linear forwards; */
+  animation:moon-sun .3s linear forwards;
+}
+.sun-icon{
+  color:#ffbb52;
+  /* animation:sun-moon .3s linear forwards; */
+  animation:moon-sun .3s linear forwards;  
+}
+.moon-sun{
+  animation:moon-sun .3s linear forwards;  
+}
+.sun-moon{
+  animation:sun-moon .3s linear forwards;
+}
+  @keyframes sun-moon{
+    from{
+      top:4%
+    }
+    to{
+      opacity:100%;
+      top:-85%;
+    }
+  }
+  @keyframes moon-sun{
+    from{
+      top:-85%
+    }
+    to{
+      opacity:100%;
+      top:4%;
+    }
+  }
 
+.sun-icon:hover{
+  opacity:100%;
+}
 .body{
   height:auto;
 }
