@@ -77,7 +77,12 @@ li{
   width:fit-content;
   float:left;
 }
-
+.nav-name{
+  position:fixed;
+  left:5%;
+  background-color:orange;
+  /* top:2%; */
+}
 .nav-controls{
   position:relative;
   left:60vw;
@@ -113,6 +118,7 @@ li{
   transform: scaleX(0);
   transition: transform .15s ease-in-out;
 }
+
 /* .nav-butt:hover::before { */
 .selected:before{
   transform-origin: left;
@@ -223,7 +229,7 @@ canvas:active{
 }
 
 .drop{
-  animation:basic-drop .71s linear forwards;
+  animation:basic-drop .8s linear forwards;
 
 }
 @keyframes basic-drop{

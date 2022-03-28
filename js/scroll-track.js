@@ -1,5 +1,10 @@
 import $ from 'jquery'
 
+let one = false
+let two = false
+let three = false
+let four = false
+
 $(window).scroll(function(){
     let endLine = $(window).scrollTop() - 60
     if ($("#about").offset().top > endLine){
@@ -7,7 +12,7 @@ $(window).scroll(function(){
         $(".nav-skills").children().removeClass('selected')
         $(".nav-projects").children().removeClass('selected')
         $(".nav-contact").children().removeClass('selected')
-        $(".about-me").addClass('drop')
+        // $(".about-me").addClass('drop')
     } else if ($("#skills").offset().top > endLine) {
         $(".nav-about").children().removeClass('selected')
         $(".nav-skills").children().addClass('selected')
