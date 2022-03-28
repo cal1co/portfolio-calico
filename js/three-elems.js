@@ -2,7 +2,7 @@ import '../css/style.css'
 import * as THREE from 'three'
 import gsap from 'gsap'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
-
+import $ from 'jquery'
 // THREE WORLD
 const canvas = document.querySelector('canvas.world')
 const params = {
