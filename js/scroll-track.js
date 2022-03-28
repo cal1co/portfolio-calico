@@ -35,20 +35,3 @@ $(window).scroll(function(){
         $(".nav-contact").children().addClass('selected')
     }
 })
-let sun = true
-$(".go-up").on('click', function(){
-    if (sun){
-        $(this).children().removeClass('moon-sun')
-        $(this).children().addClass('sun-moon')
-        sun = false
-        console.log('SUN:', sun)
-    } 
-    else{
-        console.log('not firing')
-        $(this).children().removeClass('sun-moon')
-        $(this).children().addClass('moon-sun')
-        sun = true
-    }
-    console.log(sun)
-
-})

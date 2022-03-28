@@ -3,14 +3,12 @@ import * as THREE from 'three'
 import gsap from 'gsap'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 
+// THREE WORLD
 const canvas = document.querySelector('canvas.world')
 const params = {
     sky:{
-        // day:'#49C5F5',
-        // day:'#cccccc',
         day:'#ffffff',
-        // night:'#262926',
-        // night:'#3242F5'
+        night:'#080C17'
     }, 
     planet:{
         // day:'0x3BF560',
@@ -142,3 +140,35 @@ animation()
 
 
 console.log(THREE)
+
+
+
+// DARK MODE 
+
+let sun = true
+$(".go-up").on('click', function(){
+    if (sun){
+        $(this).children().removeClass('moon-sun')
+        $(this).children().addClass('sun-moon')
+        darkmode(true)
+        sun = false
+    } 
+    else{
+        $(this).children().removeClass('sun-moon')
+        $(this).children().addClass('moon-sun')
+        darkmode(false)
+        sun = true
+    }
+
+})
+let darkmode = (env) => {
+    if (env){ // light
+        $('body').addClass('dark-body')
+        scene.background = new THREE.Color(params.sky.night)
+    } else { // dark
+        $('body').removeClass('dark-body')
+        scene.background = new THREE.Color(params.sky.day)
+
+    }
+}
+

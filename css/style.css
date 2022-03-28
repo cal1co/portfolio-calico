@@ -16,6 +16,17 @@ html{
   font-size:1rem;
   scroll-behavior: smooth;
 }
+body{
+  /* background-color:rgb(19, 19, 19); */
+  transition:background-color 1s;
+  transition:color 1s
+}
+.dark-body{
+  background-color:#080C17;
+  color:white;
+}
+  
+
 
 .go-up{
   position:fixed;
@@ -126,6 +137,9 @@ li{
   left:5%;
   background-color:orange;
   /* top:2%; */
+}
+.nav-name:hover{
+  /* transform:translateY(5%) */
 }
 .nav-controls{
   position:relative;
