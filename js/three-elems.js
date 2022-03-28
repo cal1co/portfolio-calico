@@ -167,6 +167,7 @@ let darkmode = (env) => {
         $('.nav-butt').css('color', 'white')
         $(".go-up").css('background-color', 'white')
         // $(".svg-icon").css('filter', 'invert(100%) sepia(100%) saturate(0%) hue-rotate(290deg) brightness(101%) contrast(101%);')
+        $(".svg-icon").css('fill', 'white')
         $('nav').css('background', 'black')
         scene.background = new THREE.Color(params.sky.night)
     } else { // dark
@@ -174,6 +175,8 @@ let darkmode = (env) => {
         $('.nav-butt').css('color', 'black')
         $(".go-up").css('background-color', 'black')
         $('nav').css('background', 'white')
+        $(".svg-icon").css('fill', 'black')
+
 
         scene.background = new THREE.Color(params.sky.day)
 
