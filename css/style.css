@@ -237,10 +237,10 @@ canvas:active{
 /* 
 ABOUT 
 */
-.about{
+.about, .skills{
   min-height:50vh;
   height:auto;
-  margin-top:5vh;
+  margin-top:10vh;
   /* margin-bottom:5vh; */
   /* outline:1px solid pink */
 }
@@ -275,11 +275,11 @@ ABOUT
 }
 .about-grid{
   position:relative;
-  margin-top:4.5vh;
+  margin-top:10vh;
   left:50%;
   transform:translateX(-50%);
   width:80vw;
-  height:80vh;
+  height:100vh;
   display: grid; 
   grid-auto-columns: 1fr; 
   grid-template-columns: 1fr 1fr 1fr; 

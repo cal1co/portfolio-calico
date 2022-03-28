@@ -166,7 +166,7 @@ let darkmode = (env) => {
         $('body').addClass('dark-body')
         $('.nav-butt').css('color', 'white')
         $(".go-up").css('background-color', 'white')
-        $(".svg-icon").css('filter', 'invert(100%) sepia(100%) saturate(0%) hue-rotate(290deg) brightness(101%) contrast(101%);')
+        // $(".svg-icon").css('filter', 'invert(100%) sepia(100%) saturate(0%) hue-rotate(290deg) brightness(101%) contrast(101%);')
         $('nav').css('background', 'black')
         scene.background = new THREE.Color(params.sky.night)
     } else { // dark
