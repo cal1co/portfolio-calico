@@ -238,6 +238,12 @@ canvas:active{
   /* margin-bottom:5vh; */
   outline:1px solid pink
 }
+.about-title{
+  position:relative;
+  display:flex;
+  justify-content: center;
+  font-size:clamp(1.6rem, 7vw, 2.2rem);
+}
 .about-me, .my-skills,.my-projects{
   /* opacity:0%; */
   position:relative;
