@@ -311,14 +311,27 @@ ABOUT
   left:50%;
   transform:translateX(-50%);
   margin-bottom:15px;
+  overflow:hidden;
+}
+.about-icons > svg{
+  width:65px;
+  height:65px;
+  position:relative;
+  top:50%;
+  transform:translateY(-50%);
+  /* filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(290deg) brightness(101%) contrast(101%); */
 }
 .about-items{
   font-size:clamp(1.3rem, 3vw, 1.8rem);
   font-weight:200;
 }
 .about-exp{
+  margin-top:5px;
   width:25ch;
-  text-align:center;
+  position:relative;
+  left:50%;
+  transform:translateX(-50%);
+  opacity:50%;
 }
 
 
