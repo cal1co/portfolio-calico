@@ -456,18 +456,31 @@ SKILLS
 :is(.skills-grid1, .skills-grid2, .skills-grid3, .skills-grid4) > *:hover{
   transform:translate(-100%, -52%);
 }
-.skills-grid1{
+.skills-grid1, .skills-grid3{
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-.skills-grid2{
+.skills-grid2, .skills-grid4{
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
-.skills-grid3{
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+@media screen and (max-width:750px){
+  .skills-grid1, .skills-grid3{
+    grid-template-columns: 1fr 1fr; 
+  }
+  .skills-grid2, .skills-grid4{
+    grid-template-columns:1fr 1fr
+  }
+  .skill{
+    transform:translate(-75%, -50%)
+  }
+  .mongo, .postgres{
+    transform:translate(0%, -50%)
+  }
+  .projects{
+    margin-top:90vh;
+  }
 }
-.skills-grid4{
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-}
+
+
 
 
 /* 
