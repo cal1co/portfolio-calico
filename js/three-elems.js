@@ -175,7 +175,7 @@ let darkmode = (env) => {
     } else { // dark
         $('body').removeClass('dark-body')
         $('.nav-butt').css('color', 'black')
-        $(".go-up").css('background-color', 'black')
+        // $(".go-up").css('background-color', 'black')
         $('nav').css('background', 'white')
         $(".svg-icon").css('fill', 'black')
         $(".skill").css('background-color', 'white')
