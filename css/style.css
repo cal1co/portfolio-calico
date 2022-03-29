@@ -306,7 +306,8 @@ ABOUT
 .about-icons{
   height:85px;
   width:85px;
-  border:1px solid orange;
+  /* border:1px solid orange; */
+  background-image:linear-gradient(to bottom right, #7464C4, #BAB8EB 80%);
   border-radius:99px;
   position:relative;
   left:50%;
@@ -315,8 +316,8 @@ ABOUT
   overflow:hidden;
 }
 .about-icons > svg{
-  width:65px;
-  height:65px;
+  width:45px;
+  height:45px;
   position:relative;
   top:50%;
   transform:translateY(-50%);
