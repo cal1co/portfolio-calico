@@ -250,8 +250,6 @@ ABOUT
 .about, .skills{
   min-height:80vh;
   height:auto;
-  /* margin-bottom:5vh; */
-  /* outline:1px solid pink */
 }
 .about-title{
   position:relative;
@@ -438,6 +436,7 @@ SKILLS
   transform:translateX(-50%);
 }
 :is(.skills-grid1, .skills-grid2, .skills-grid3, .skills-grid4) > *{
+  opacity:0%;
   position:relative;
   top:50%;
   left:50%;
@@ -534,4 +533,30 @@ PROJECTS
     opacity:100%;
     top:0%;
   }
+}
+@keyframes skill-drop{
+  from{
+    opacity:0%;
+    top:35%;
+  }
+  to{
+    opacity:100%;
+    top:50%;
+  }
+}
+
+.drop1{
+  animation:skill-drop .4s linear forwards;
+}
+.drop2{
+  animation:skill-drop .6s linear forwards;
+}
+.drop3{
+  animation:skill-drop .8s linear forwards;
+}
+.drop4{
+  animation:skill-drop 1.2s linear forwards;
+}
+.drop5{
+  animation:skill-drop 1.6s linear forwards;
 }
