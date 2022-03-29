@@ -475,6 +475,12 @@ SKILLS
   .mongo, .postgres{
     transform:translate(0%, -50%)
   }
+  .skill:hover{
+    transform:translate(-75%, -52%)
+  }
+  :is(.mongo, .postgres):hover{
+    transform:translate(0%, -52%)
+  }
   .projects{
     margin-top:90vh;
   }
@@ -529,6 +535,3 @@ PROJECTS
     top:0%;
   }
 }
-
-
-
