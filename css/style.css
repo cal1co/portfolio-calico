@@ -280,6 +280,7 @@ ABOUT
   left:50%;
   transform:translateX(-50%)
 }
+
 .about-grid{
   position:relative;
   margin-top:10vh;
@@ -325,31 +326,64 @@ ABOUT
   background-image:linear-gradient(to bottom right, #7CB2DF, white 160%);
   box-shadow: 0px 0px 20px 1px #7CB2DF;
 }
+.about-1:hover{
+  outline:1px solid #7CB2DF
+}
 .about-2{
   background-image:linear-gradient(to bottom right, #AD87DE, white 160%);
   box-shadow: 0px 0px 20px 1px #AD87DE;
-
+}
+.about-2:hover{
+  outline:1px solid #AD87DE
 }
 .about-3{
   background-image:linear-gradient(to bottom right, #DE9992, white 160%);
   box-shadow: 0px 0px 20px 1px #DE9992;
-
+}
+.about-3:hover{
+  outline:1px solid #DE9992
 }
 .about-4{
   background-image:linear-gradient(to bottom right, #DE9A66, white 160%);
   box-shadow: 0px 0px 20px 1px #DE9A66;
-
+}
+.about-4:hover{
+  outline:1px solid #DE9A66
 }
 .about-5{
   background-image:linear-gradient(to bottom right, #DEDB68, white 160%);
   box-shadow: 0px 0px 20px 1px #DEDB68;
-
+}
+.about-5:hover{
+  outline:1px solid #DEDB68
 }
 .about-6{
   background-image:linear-gradient(to bottom right, #71DEA2, white 160%);
   box-shadow: 0px 0px 20px 1px #71DEA2;
-
 }
+.about-6:hover{
+  outline:1px solid #71DEA2
+}
+
+@media screen and (max-width: 940px){
+  .about-exp{
+    display:none;
+  }
+  .about-grid{
+    height:60vh;
+  }
+}
+@media screen and (max-width:550px){
+  .about-grid{
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    grid-template-areas: 
+    "about1 about2"
+    "about3 about4"
+    "about5 about6"; 
+  }
+}
+
 .about-icons > svg{
   width:45px;
   height:45px;
@@ -419,7 +453,7 @@ SKILLS
   box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
 }
 :is(.skills-grid1, .skills-grid2, .skills-grid3) > *:hover{
-  transform:translate(-100%, -55%);
+  transform:translate(-100%, -52%);
 }
 .skills-grid1{
   grid-template-columns: 1fr 1fr 1fr 1fr;
