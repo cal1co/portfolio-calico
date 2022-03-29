@@ -341,7 +341,7 @@ SKILLS
 */
 .skills-grid1, .skills-grid2, .skills-grid3{
   display:grid;
-  width:30vw;
+  width:fit-content;
   margin-bottom:30px;
   position:relative;
   left: 50%;
