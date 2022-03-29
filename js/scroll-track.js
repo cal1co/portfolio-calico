@@ -1,6 +1,5 @@
 import $ from 'jquery'
 
-
 $(window).scroll(function(){
     let endLine = $(window).scrollTop() - 60
     if ($("#about").offset().top > endLine){

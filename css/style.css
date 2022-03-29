@@ -336,8 +336,36 @@ ABOUT
 }
 
 
-
-
+/* 
+SKILLS
+*/
+.skills-grid1, .skills-grid2, .skills-grid3{
+  display:grid;
+  width:30vw;
+  margin-bottom:30px;
+  position:relative;
+  left: 50%;
+  transform:translateX(-50%);
+}
+:is(.skills-grid1, .skills-grid2, .skills-grid3) > *{
+  position:relative;
+  top:50%;
+  left:50%;
+  border: 2px solid orange;
+  width:fit-content;
+  padding:10px;
+  transform:translateX(-50%)
+}
+.skills-grid1{
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  
+}
+.skills-grid2{
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.skills-grid3{
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
 
 
 
@@ -384,3 +412,6 @@ PROJECTS
     top:0%;
   }
 }
+
+
+
