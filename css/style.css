@@ -3,6 +3,12 @@
 /* https://color.adobe.com/create/color-wheel */
 :root{
   --theme-one:slateblue;
+  --about-1:#7CB2DF
+  --about-2:#AD87DE
+  --about-3:#DE9992
+  --about-4:#DE9A66
+  --about-5:#DEDB68
+  --about-6:#71DEA2
 }
 
 
@@ -307,13 +313,31 @@ ABOUT
   height:85px;
   width:85px;
   /* border:1px solid orange; */
-  background-image:linear-gradient(to bottom right, #7464C4, #BAB8EB 80%);
+  /* background-image:linear-gradient(to bottom right, #7464C4 , #BAB8EB 80%); */
   border-radius:99px;
   position:relative;
   left:50%;
   transform:translateX(-50%);
   margin-bottom:15px;
   overflow:hidden;
+}
+.about-1{
+  background-image:linear-gradient(to bottom right, #7CB2DF, white 160%);
+}
+.about-2{
+  background-image:linear-gradient(to bottom right, #AD87DE, white 160%);
+}
+.about-3{
+  background-image:linear-gradient(to bottom right, #DE9992, white 160%);
+}
+.about-4{
+  background-image:linear-gradient(to bottom right, #DE9A66, white 160%);
+}
+.about-5{
+  background-image:linear-gradient(to bottom right, #DEDB68, white 160%);
+}
+.about-6{
+  background-image:linear-gradient(to bottom right, #71DEA2, white 160%);
 }
 .about-icons > svg{
   width:45px;
