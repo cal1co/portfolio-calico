@@ -3,6 +3,22 @@ import * as THREE from 'three'
 import gsap from 'gsap'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import $ from 'jquery'
+
+
+// Cursor
+const cursor = {
+    x: 0,
+    y: 0
+}
+window.addEventListener('mousemove', (e) => {
+
+    cursor.x = e.clientX / sizes.width - 0.5
+    cursor.y = -(e.clientY / sizes.height - 0.5)
+})
+
+
+
+
 // THREE WORLD
 const canvas = document.querySelector('canvas.world')
 const params = {
@@ -29,6 +45,7 @@ const geometry = new THREE.SphereGeometry(2, 128, 64)
 // const geometry = new THREE.BoxGeometry(1, 1, 1)
 const material = new THREE.MeshToonMaterial({ color: params.planet.day, wireframe:true })
 const mesh = new THREE.Mesh(geometry, material)
+mesh.position.y = -2
 scene.add(mesh)
 
 const light = new THREE.AmbientLight()
@@ -54,7 +71,7 @@ window.addEventListener('resize', () => {
 
 const camera = new THREE.PerspectiveCamera(20, sizes.width / sizes.height, 0.1, 100)
 camera.position.z = 2.5
-camera.position.y = 2
+// camera.position.y = 2
 scene.add(camera)
 
 
@@ -109,9 +126,22 @@ gsap.fromTo('nav', {opacity:0}, {opacity:0.9, duration:2})
 // gsap.fromTo('.about', {opacity:0}, {opacity:1, duration:2})
 // gsap.fromTo('.header-container', {opacity:0}, {opacity:.9, duration:3})
 
+
+
+let canvasActive = false
+$('canvas').on('mouseover', function(){
+    canvasActive = true
+})
+$('canvas').on('mouseleave', function(){
+    canvasActive = false
+})
+
+
 const animation = () => {
     renderer.setSize(sizes.width, sizes.height)
     
+
+    // Page load size
     if (sizes.height < window.innerHeight * 0.50){
         sizes.height = sizes.height += 10
         camera.aspect = sizes.width / sizes.height
@@ -123,11 +153,12 @@ const animation = () => {
         camera.aspect = sizes.width / sizes.height
         camera.updateProjectionMatrix()
     }
+    if (canvasActive){
+        camera.position.x = cursor.x / 10
+        camera.position.y = cursor.y / 20
+    } 
 
-
-    const elapsedTime = clock.getElapsedTime()
-
-    // controls.update()
+    // const elapsedTime = clock.getElapsedTime()
 
     // Render
     renderer.render(scene, camera)

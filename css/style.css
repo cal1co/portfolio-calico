@@ -80,7 +80,7 @@ body{
 }
   @keyframes sun-moon{
     from{
-      top:4%
+      top:7%
     }
     to{
       opacity:100%;
@@ -93,7 +93,7 @@ body{
     }
     to{
       opacity:100%;
-      top:4%;
+      top:7%;
     }
   }
 
