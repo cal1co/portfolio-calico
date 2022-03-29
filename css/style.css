@@ -339,12 +339,20 @@ ABOUT
 /* 
 SKILLS
 */
+.skills{
+  height:100vh;
+}
+.skills-grid{
+  margin-top:10vh;
+  height:100vh;
+}
 .skills-grid1, .skills-grid2, .skills-grid3{
   display:grid;
   width:fit-content;
   margin-bottom:30px;
   position:relative;
   left: 50%;
+  /* top:50%; */
   transform:translateX(-50%);
 }
 :is(.skills-grid1, .skills-grid2, .skills-grid3) > *{
@@ -352,13 +360,16 @@ SKILLS
   top:50%;
   left:50%;
   border: 2px solid orange;
+  border-radius:20%;
   width:fit-content;
   padding:10px;
-  transform:translateX(-50%)
+  transform:translate(-100%,-50%);
+  margin-left:2vw;
+  margin-right:2vw;
+  margin-bottom:4vh;
 }
 .skills-grid1{
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  
 }
 .skills-grid2{
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -374,9 +385,6 @@ PROJECTS
 */
 .projects{
   height:60vh;
-}
-.skills{
-  height:30vh;
 }
 .contact{
   height:30vh;
