@@ -343,6 +343,10 @@ SKILLS
 .skills{
   height:100vh;
 }
+.skill-img{
+  height:60px;
+  width:auto;
+}
 .skills-grid{
   margin-top:10vh;
   height:fit-content;
