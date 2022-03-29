@@ -9,6 +9,7 @@ const params = {
     sky:{
         day:'#ffffff',
         night:'#080C17'
+        // night:'#3D4259'
     }, 
     planet:{
         // day:'0x3BF560',
@@ -169,6 +170,7 @@ let darkmode = (env) => {
         // $(".svg-icon").css('filter', 'invert(100%) sepia(100%) saturate(0%) hue-rotate(290deg) brightness(101%) contrast(101%);')
         $(".svg-icon").css('fill', 'white')
         $('nav').css('background', 'black')
+        $(".skill").css('background-color', 'slateblue')
         scene.background = new THREE.Color(params.sky.night)
     } else { // dark
         $('body').removeClass('dark-body')
@@ -176,7 +178,7 @@ let darkmode = (env) => {
         $(".go-up").css('background-color', 'black')
         $('nav').css('background', 'white')
         $(".svg-icon").css('fill', 'black')
-
+        $(".skill").css('background-color', 'white')
 
         scene.background = new THREE.Color(params.sky.day)
 
