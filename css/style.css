@@ -280,7 +280,7 @@ ABOUT
   left:50%;
   transform:translateX(-50%);
   width:80vw;
-  height:100vh;
+  height:75vh;
   display: grid; 
   grid-auto-columns: 1fr; 
   grid-template-columns: 1fr 1fr 1fr; 
@@ -341,7 +341,7 @@ ABOUT
 SKILLS
 */
 .skills{
-  height:75vh;
+  height:80vh;
 }
 .skill-img{
   height:60px;
@@ -403,6 +403,12 @@ PROJECTS
 .projects{
   height:60vh;
 }
+
+
+
+
+
+
 .contact{
   height:30vh;
 }
