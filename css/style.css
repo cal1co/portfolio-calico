@@ -323,21 +323,32 @@ ABOUT
 }
 .about-1{
   background-image:linear-gradient(to bottom right, #7CB2DF, white 160%);
+  box-shadow: 0px 0px 20px 1px #7CB2DF;
 }
 .about-2{
   background-image:linear-gradient(to bottom right, #AD87DE, white 160%);
+  box-shadow: 0px 0px 20px 1px #AD87DE;
+
 }
 .about-3{
   background-image:linear-gradient(to bottom right, #DE9992, white 160%);
+  box-shadow: 0px 0px 20px 1px #DE9992;
+
 }
 .about-4{
   background-image:linear-gradient(to bottom right, #DE9A66, white 160%);
+  box-shadow: 0px 0px 20px 1px #DE9A66;
+
 }
 .about-5{
   background-image:linear-gradient(to bottom right, #DEDB68, white 160%);
+  box-shadow: 0px 0px 20px 1px #DEDB68;
+
 }
 .about-6{
   background-image:linear-gradient(to bottom right, #71DEA2, white 160%);
+  box-shadow: 0px 0px 20px 1px #71DEA2;
+
 }
 .about-icons > svg{
   width:45px;
