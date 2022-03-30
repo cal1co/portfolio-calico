@@ -24,6 +24,7 @@ const canvas = document.querySelector('canvas.world')
 const params = {
     sky:{
         day:'#ffffff',
+        // night:'#080C17'
         night:'#080C17'
         // night:'#3D4259'
     }, 

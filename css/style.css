@@ -438,7 +438,7 @@ SKILLS
   margin-top:7vh;
   /* margin-bottom:7vh; */
   /* height:fit-content; */
-  height:100vh;
+  height:fit-content;
   width:fit-content;
   position:relative;
   transform:translateX(-50%);
@@ -512,11 +512,34 @@ SKILLS
 PROJECTS
 */
 .projects{
-  height:60vh;
+  height:fit-content;
 }
+.project-items{
+  width:fit-content;
+  margin-top:4vh;
+  position:relative;
+  left:50%;
+  transform:translateX(-50%)
+}
+.project{
+  width:60vw;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  background-color:white;
+  border-radius:10px;
+  gap:10px;
+  margin-bottom:3vh;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
 
-
-
+  /* height:40vh; */
+}
+.project-img{
+  width:30vw;
+  height:auto;
+}
+.project-title{
+  font-size:clamp(1rem, 4vw, 2rem)
+}
 
 
 
