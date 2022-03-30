@@ -546,7 +546,12 @@ PROJECTS
 .project-tag{
   font-size:clamp(0.5rem, 2.5vw, 1rem)
 }
-
+.proj-2{
+  text-align:right;
+}
+.project-info{
+  margin:10px;
+}
 
 
 .contact{
