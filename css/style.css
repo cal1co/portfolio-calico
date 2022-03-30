@@ -537,9 +537,14 @@ PROJECTS
 .project-img{
   width:30vw;
   height:auto;
+  /* margin:10px; */
+  /* border-radius:10px; */
 }
 .project-title{
   font-size:clamp(1rem, 4vw, 2rem)
+}
+.project-tag{
+  font-size:clamp(0.5rem, 2.5vw, 1rem)
 }
 
 

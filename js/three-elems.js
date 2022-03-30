@@ -199,17 +199,16 @@ let darkmode = (env) => {
         $('body').addClass('dark-body')
         $('.nav-butt').css('color', 'white')
         $(".go-up").css('background-color', 'white')
-        // $(".svg-icon").css('fill', 'white')
         $('nav').css('background', 'black')
         $(".skill").css('background-color', 'slateblue')
+        $(".project").css('background-color', 'slateblue')
         scene.background = new THREE.Color(params.sky.night)
     } else { // dark
         $('body').removeClass('dark-body')
         $('.nav-butt').css('color', 'black')
-        // $(".go-up").css('background-color', 'black')
         $('nav').css('background', 'white')
-        // $(".svg-icon").css('fill', 'black')
         $(".skill").css('background-color', 'white')
+        $(".project").css('background-color', 'white')
 
         scene.background = new THREE.Color(params.sky.day)
 
