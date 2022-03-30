@@ -503,6 +503,9 @@ SKILLS
   .skills{
     height:160vh;
   }
+  .project-tag{
+    display:none;
+  }
 }
 
 
@@ -551,6 +554,7 @@ PROJECTS
 }
 .project-info{
   margin:10px;
+  margin-left:15px;
 }
 
 
