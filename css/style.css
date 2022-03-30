@@ -245,7 +245,7 @@ canvas:active{
 ABOUT 
 */
 .about, .projects{
-  margin-top:10vh;
+  margin-top:15vh;
 }
 .about, .skills{
   min-height:80vh;
@@ -417,9 +417,12 @@ SKILLS
   height:60px;
   width:auto;
 }
+
 .skills-grid{
   margin-top:7vh;
-  height:fit-content;
+  /* margin-bottom:7vh; */
+  /* height:fit-content; */
+  height:100vh;
   width:fit-content;
   position:relative;
   transform:translateX(-50%);
@@ -482,7 +485,7 @@ SKILLS
     transform:translate(0%, -52%)
   }
   .projects{
-    margin-top:90vh;
+    /* margin-top:90vh; */
   }
 }
 
