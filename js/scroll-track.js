@@ -55,3 +55,28 @@ $(window).scroll(function(){
         $(".nav-contact").children().addClass('selected')
     }
 })
+
+$(".tsuru").on('click', function(){
+    window.open("https://blissful-borg-f2769c.netlify.app/", '_blank')
+})
+$(".tsuru-repo").on('click', function(){
+    window.open('https://github.com/cal1co/tsuru-lingo-front-end', '_blank')
+})
+$(".odd").on('click', function(){
+    window.open("https://spy-fall-clone.netlify.app/#/", '_blank')
+})
+$(".odd-repo").on('click', function(){
+    window.open('https://github.com/azhang-dev/quiplash-frontend', '_blank')
+})
+$(".rev").on('click', function(){
+    window.open("https://cryptic-citadel-69958.herokuapp.com/users/new", '_blank')
+})
+$(".rev-repo").on('click', function(){
+    window.open('https://github.com/cal1co/reviewr', '_blank')
+})
+$(".ttt").on('click', function(){
+    window.open("https://cal1co.github.io/tic-tac-toe/", '_blank')
+})
+$(".ttt-repo").on('click', function(){
+    window.open('https://github.com/cal1co/tic-tac-toe', '_blank')
+})
