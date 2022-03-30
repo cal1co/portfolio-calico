@@ -522,6 +522,7 @@ PROJECTS
   transform:translateX(-50%)
 }
 .project{
+  overflow:hidden;
   width:60vw;
   display:grid;
   grid-template-columns:1fr 1fr;
