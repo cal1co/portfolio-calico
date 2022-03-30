@@ -525,6 +525,7 @@ PROJECTS
   transform:translateX(-50%)
 }
 .project{
+  position:relative;
   overflow:hidden;
   width:60vw;
   display:grid;
@@ -534,7 +535,7 @@ PROJECTS
   gap:10px;
   margin-bottom:3vh;
   box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
-
+  opacity:0%;
   /* height:40vh; */
 }
 .project-img{

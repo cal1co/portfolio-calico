@@ -46,13 +46,21 @@ $(window).scroll(function(){
         $(".nav-skills").children().removeClass('selected')
         $(".nav-projects").children().addClass('selected')
         $(".nav-contact").children().removeClass('selected')
-        
 
     } else if ($("#contact").offset().top > endLine) {
         $(".nav-about").children().removeClass('selected')
         $(".nav-skills").children().removeClass('selected')
         $(".nav-projects").children().removeClass('selected')
         $(".nav-contact").children().addClass('selected')
+    } 
+    if ($(".proj1").offset().top / 1.2 > endLine){
+        $(".proj1").addClass('drop')
+    } else if ($(".proj2").offset().top / 1.2 > endLine){
+        $(".proj2").addClass('drop')
+    } else if ($(".proj3").offset().top / 1.2  > endLine){
+        $(".proj3").addClass('drop')
+    } else if ($(".proj4").offset().top / 1.2  > endLine){
+        $(".proj4").addClass('drop')
     }
 })
 
