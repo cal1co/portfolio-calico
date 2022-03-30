@@ -414,8 +414,24 @@ SKILLS
   height:80vh;
 }
 .skill-img{
+  /* aspect-ratio:1/1; */
   height:60px;
   width:auto;
+  position:relative;
+  left:50%;
+  transform:translateX(-50%)
+}
+.skill{
+  min-height:65px;
+  min-width:65px;
+  max-width:65px;
+}
+.mongo > abbr > .skill-img{
+  max-height:50px;
+  max-width:70px;
+  position:relative;
+  top:50%;
+  transform:translate(-50%, -50%)
 }
 
 .skills-grid{
@@ -484,8 +500,8 @@ SKILLS
   :is(.mongo, .postgres):hover{
     transform:translate(0%, -52%)
   }
-  .projects{
-    /* margin-top:90vh; */
+  .skills{
+    height:160vh;
   }
 }
 
