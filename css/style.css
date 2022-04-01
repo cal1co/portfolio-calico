@@ -16,6 +16,7 @@
   /* border:1px solid slateblue; */
   margin:0;
   font-family: 'Kumbh Sans', sans-serif;
+  scroll-margin-top: 10vh;
 }
 html{
   overflow-x: hidden;
@@ -571,6 +572,9 @@ CONTACT
   padding-right:10px;
   cursor:pointer;
   transition:background 0.6s;
+  width:15vh;
+  height:5vh;
+  text-align:center;
 }
 .contact-butt:hover{
   background:var(--about-4);
