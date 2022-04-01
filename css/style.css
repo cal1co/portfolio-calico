@@ -287,12 +287,13 @@ ABOUT
   left:50%;
   transform:translateX(-50%);
   width:80vw;
-  height:75vh;
+  height:fit-content;
   display: grid; 
   grid-auto-columns: 1fr; 
   grid-template-columns: 1fr 1fr 1fr; 
   grid-template-rows: 1fr 1fr; 
-  gap: 0px 0px; 
+  gap: 9vh 0px; 
+  /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
   grid-template-areas: 
     "about1 about2 about3"
     "about4 about5 about6"; 
@@ -403,7 +404,7 @@ ABOUT
   left:50%;
   transform:translateX(-50%);
   opacity:50%;
-  /* font-size:clamp(0.7rem, 2vw, 1rem) */
+  line-height:1.75em;
 }
 
 
@@ -528,7 +529,7 @@ PROJECTS
   background-color:white;
   border-radius:10px;
   gap:10px;
-  margin-bottom:3vh;
+  margin-bottom:5vh;
   box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
   opacity:0%;
   /* height:40vh; */
