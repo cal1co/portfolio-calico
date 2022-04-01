@@ -10,9 +10,11 @@
   --about-5:#DEDB68;
   --about-6:#71DEA2;
   /* --cta:#D11149; */
-  --cta:#FF9EEA;
-  --underline:#84c2ff;
-  --name:#FFC86B;
+  --cta:#3E52FF;
+  /* --underline:#84c2ff; */
+  /* --underline:#9A4AFF; */
+  --underline:#30B2FF;
+  --name:#9491FF;
 }
 
 
@@ -137,7 +139,8 @@ li{
 .nav-name{
   position:fixed;
   left:5%;
-  background-color:var(--name);
+  background-color:orange;
+  border:0.5px solid gray;
   /* top:2%; */
 }
 .nav-controls{
@@ -191,6 +194,7 @@ HEADER + THREE
   height:50vh
 }
 .header-container{
+  margin-top:3vh;
   position:absolute;
   z-index:2;
   width:20vw;
@@ -217,6 +221,7 @@ HEADER + THREE
   font-size:clamp(0.6rem, 3vw, 1.2rem);
 }
 canvas{
+  margin-top:3vh;
   height:100%;
   width:90vw;
   position:relative;
@@ -224,6 +229,8 @@ canvas{
   transform:translateX(-50%);
   border: 3px solid var(--theme-one);
   border-radius:80px;
+
+
   /* border-bottom-left-radius:300px 1000%; */
   /* border-bottom-right-radius:300px 1000%; */
 }
@@ -263,7 +270,7 @@ ABOUT
   padding-top:30px;
 }
 .underline{
-  border:0.15em solid #84c2ff;
+  border:0.15em solid var(--underline);
   border-radius:10px;
   width:9vw;
   height:0;
