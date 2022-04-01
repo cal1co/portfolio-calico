@@ -11,7 +11,6 @@ const cursor = {
     y: 0
 }
 window.addEventListener('mousemove', (e) => {
-
     cursor.x = e.clientX / sizes.width - 0.5
     cursor.y = -(e.clientY / sizes.height - 0.5)
 })
@@ -137,12 +136,29 @@ $('canvas').on('mouseleave', function(){
     canvasActive = false
 })
 
+const contactCursor = {
+    x:0,
+    y:0
+}
+const butt = $(".contact-butt")
+const card = $(".business-card")
+// card.on('mousemove', function(e){
+//     contactCursor.x = e.clientX / card.width() * 10
+//     contactCursor.y = e.clientY / card.height() * 5
+//     butt.css({left:contactCursor.x, top:contactCursor.y})
+// })
+
+
+
+// window.addEventListener('mousemove', (e) => {
+//     cursor.x = e.clientX / sizes.width - 0.5
+//     cursor.y = -(e.clientY / sizes.height - 0.5)
+// })
 
 const animation = () => {
-    renderer.setSize(sizes.width, sizes.height)
     
-
     // Page load size
+    renderer.setSize(sizes.width, sizes.height)
     if (sizes.height < window.innerHeight * 0.50){
         sizes.height = sizes.height += 10
         camera.aspect = sizes.width / sizes.height
@@ -165,15 +181,15 @@ const animation = () => {
     renderer.render(scene, camera)
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
+    // Contact Butt
+
+
+
     requestAnimationFrame(animation)
 
 
 }
 animation()
-
-
-console.log(THREE)
-
 
 
 // DARK MODE 
@@ -202,6 +218,7 @@ let darkmode = (env) => {
         $('nav').css('background', 'black')
         $(".skill").css('background-color', 'slateblue')
         $(".project").css('background-color', 'slateblue')
+        butt.css('color', 'white')
         scene.background = new THREE.Color(params.sky.night)
     } else { // dark
         $('body').removeClass('dark-body')
@@ -209,9 +226,15 @@ let darkmode = (env) => {
         $('nav').css('background', 'white')
         $(".skill").css('background-color', 'white')
         $(".project").css('background-color', 'white')
+        butt.css('color', 'black')
 
         scene.background = new THREE.Color(params.sky.day)
 
     }
 }
+
+
+
+
+
 

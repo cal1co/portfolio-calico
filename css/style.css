@@ -3,12 +3,12 @@
 /* https://color.adobe.com/create/color-wheel */
 :root{
   --theme-one:slateblue;
-  --about-1:#7CB2DF
-  --about-2:#AD87DE
-  --about-3:#DE9992
-  --about-4:#DE9A66
-  --about-5:#DEDB68
-  --about-6:#71DEA2
+  --about-1:#7CB2DF;
+  --about-2:#AD87DE;
+  --about-3:#DE9992;
+  --about-4:#DE9A66;
+  --about-5:#DEDB68;
+  --about-6:#71DEA2;
 }
 
 
@@ -33,7 +33,6 @@ body{
   color:white;
 }
   
-
 
 .go-up{
   position:fixed;
@@ -104,7 +103,7 @@ body{
   height:auto;
 }
 nav{
-  height:5vh;
+  height:6vh;
   position:sticky;
   top:0;
   z-index: 999;
@@ -114,9 +113,7 @@ nav{
 }
 .page-controls{
   outline:2px solid crimson;
-
   width:auto;
-  /* height:5vh; */
   position:relative;
   right:50%;
   z-index:2;
@@ -137,9 +134,6 @@ li{
   left:5%;
   background-color:orange;
   /* top:2%; */
-}
-.nav-name:hover{
-  /* transform:translateY(5%) */
 }
 .nav-controls{
   position:relative;
@@ -184,6 +178,7 @@ li{
 }
 
 
+
 /* 
 HEADER + THREE
 */
@@ -194,7 +189,6 @@ HEADER + THREE
   position:absolute;
   z-index:2;
   width:20vw;
-  /* top:20%; */
   top:15%;
   left:10%;
   animation:header-drop .71s linear forwards;
@@ -213,12 +207,8 @@ HEADER + THREE
 .header-name{
   font-size:clamp(2rem, 7vw, 3rem);
   position:relative;
-  /* top:20%; */
-  /* left:10%; */
 }
 .header-tag{
-  /* top:35%; */
-  /* left:10%; */
   font-size:clamp(0.6rem, 3vw, 1.2rem);
 }
 canvas{
@@ -258,10 +248,7 @@ ABOUT
   font-size:clamp(1.6rem, 7vw, 2.2rem);
 }
 .about-me, .my-skills,.my-projects{
-  /* opacity:0%; */
   position:relative;
-  /* outline: 3px solid red; */
-  /* height:80%; */
   height:fit-content;
   width:90%;
   left:50%;
@@ -269,7 +256,6 @@ ABOUT
   overflow:hidden;
   padding-bottom:30px;
   padding-top:30px;
-  /* margin-bottom:5vh; */
 }
 .underline{
   border:0.15em solid #84c2ff;
@@ -408,6 +394,7 @@ ABOUT
 }
 
 
+
 /* 
 SKILLS
 */
@@ -434,7 +421,6 @@ SKILLS
   top:50%;
   transform:translate(-50%, -50%)
 }
-
 .skills-grid{
   margin-top:7vh;
   height:fit-content;
@@ -506,7 +492,6 @@ SKILLS
 
 
 
-
 /* 
 PROJECTS
 */
@@ -532,13 +517,10 @@ PROJECTS
   margin-bottom:5vh;
   box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
   opacity:0%;
-  /* height:40vh; */
 }
 .project-img{
   width:30vw;
   height:auto;
-  /* margin:10px; */
-  /* border-radius:10px; */
 }
 .project-title{
   font-size:clamp(1rem, 4vw, 2rem)
@@ -555,9 +537,50 @@ PROJECTS
 }
 
 
+/* 
+CONTACT
+ */
 .contact{
-  height:30vh;
+  height:fit-content;
 }
+.business-card{
+  /* display:flex;
+  justify-content: center; */
+  height:fit-content;
+  width:fit-content;
+  position:relative;
+  left:50%;
+  transform:translate(-50%, 0%)
+}
+.contact-tag{
+  text-align:center;
+  margin-top:3vh;
+  font-size:clamp(1rem, 3vw, 1.7rem);
+}
+.contact-butt{
+  margin-top:5vh;
+  position:relative;
+  display:flex;
+  left:50%;
+  transform:translateX(-50%);
+  background:none;
+  border:2px solid var(--about-4);
+  border-radius:10px;
+  padding:5px;
+  padding-left:10px;
+  padding-right:10px;
+  cursor:pointer;
+  transition:background 0.6s;
+}
+.contact-butt:hover{
+  background:var(--about-4);
+
+}
+.mail-link{
+  text-decoration:none;
+}
+
+
 
 .footer{
   height:20vh;
@@ -577,7 +600,6 @@ PROJECTS
 
 .drop{
   animation:basic-drop .8s linear forwards;
-
 }
 @keyframes basic-drop{
   from{
