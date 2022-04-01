@@ -2,13 +2,17 @@
 
 /* https://color.adobe.com/create/color-wheel */
 :root{
-  --theme-one:slateblue;
+  --theme-one:#6863D4;
   --about-1:#7CB2DF;
   --about-2:#AD87DE;
   --about-3:#DE9992;
   --about-4:#DE9A66;
   --about-5:#DEDB68;
   --about-6:#71DEA2;
+  /* --cta:#D11149; */
+  --cta:#FF9EEA;
+  --underline:#84c2ff;
+  --name:#FFC86B;
 }
 
 
@@ -133,7 +137,7 @@ li{
 .nav-name{
   position:fixed;
   left:5%;
-  background-color:orange;
+  background-color:var(--name);
   /* top:2%; */
 }
 .nav-controls{
@@ -164,7 +168,7 @@ li{
   width:100%;
   height:5px;
   border-radius:4px;
-  background-color:#84c2ff;
+  background-color:var(--underline);
   bottom: 0;
   left: 0; 
   transform-origin: right;
@@ -311,46 +315,46 @@ ABOUT
   overflow:hidden;
 }
 .about-1{
-  background-image:linear-gradient(to bottom right, #7CB2DF, white 160%);
-  box-shadow: 0px 0px 20px 1px #7CB2DF;
+  background-image:linear-gradient(to bottom right, var(--about-1), white 160%);
+  box-shadow: 0px 0px 20px 1px var(--about-1);
 }
 .about-1:hover{
-  outline:1px solid #7CB2DF
+  outline:1px solid var(--about-1)
 }
 .about-2{
-  background-image:linear-gradient(to bottom right, #AD87DE, white 160%);
-  box-shadow: 0px 0px 20px 1px #AD87DE;
+  background-image:linear-gradient(to bottom right, var(--about-2), white 160%);
+  box-shadow: 0px 0px 20px 1px var(--about-2);
 }
 .about-2:hover{
-  outline:1px solid #AD87DE
+  outline:1px solid var(--about-2)
 }
 .about-3{
-  background-image:linear-gradient(to bottom right, #DE9992, white 160%);
-  box-shadow: 0px 0px 20px 1px #DE9992;
+  background-image:linear-gradient(to bottom right, var(--about-3), white 160%);
+  box-shadow: 0px 0px 20px 1px var(--about-3);
 }
 .about-3:hover{
-  outline:1px solid #DE9992
+  outline:1px solid var(--about-3)
 }
 .about-4{
-  background-image:linear-gradient(to bottom right, #DE9A66, white 160%);
-  box-shadow: 0px 0px 20px 1px #DE9A66;
+  background-image:linear-gradient(to bottom right, var(--about-4), white 160%);
+  box-shadow: 0px 0px 20px 1px var(--about-4);
 }
 .about-4:hover{
-  outline:1px solid #DE9A66
+  outline:1px solid var(--about-4)
 }
 .about-5{
-  background-image:linear-gradient(to bottom right, #DEDB68, white 160%);
-  box-shadow: 0px 0px 20px 1px #DEDB68;
+  background-image:linear-gradient(to bottom right, var(--about-5), white 160%);
+  box-shadow: 0px 0px 20px 1px var(--about-5);
 }
 .about-5:hover{
-  outline:1px solid #DEDB68
+  outline:1px solid var(--about-5)
 }
 .about-6{
-  background-image:linear-gradient(to bottom right, #71DEA2, white 160%);
-  box-shadow: 0px 0px 20px 1px #71DEA2;
+  background-image:linear-gradient(to bottom right, var(--about-6), white 160%);
+  box-shadow: 0px 0px 20px 1px var(--about-6);
 }
 .about-6:hover{
-  outline:1px solid #71DEA2
+  outline:1px solid var(--about-6)
 }
 
 @media screen and (max-width: 940px){
@@ -565,25 +569,37 @@ CONTACT
   left:50%;
   transform:translateX(-50%);
   background:none;
-  border:2px solid var(--about-4);
+  /* border:2px solid #EB46BF; */
+  border:2px solid var(--cta);
   border-radius:10px;
   padding:5px;
   padding-left:10px;
   padding-right:10px;
   cursor:pointer;
   transition:background 0.6s;
-  width:15vh;
-  height:5vh;
+  width:150px;
+  height:50px;
   text-align:center;
 }
 .contact-butt:hover{
-  background:var(--about-4);
-
+  /* background:#EB46BF; */
+  background:var(--cta);
+}
+.contact-butt:hover > p {
+  color:white;
 }
 .mail-link{
   text-decoration:none;
 }
-
+.contact-butt > p{
+  position:relative;
+  height:fit-content;
+  width:fit-content;
+  left:50%;
+  top:50%;
+  transform:translate(-50%, -50%);
+  text-align:center;
+}
 
 
 .footer{
