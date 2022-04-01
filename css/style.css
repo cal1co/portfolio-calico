@@ -436,14 +436,11 @@ SKILLS
 
 .skills-grid{
   margin-top:7vh;
-  /* margin-bottom:7vh; */
-  /* height:fit-content; */
   height:fit-content;
   width:fit-content;
   position:relative;
   transform:translateX(-50%);
   left:50%;
-  /* background: radial-gradient(rgba(255, 255, 255, 0.623), #f7f8fc); */
 }
 .skills-grid1, .skills-grid2, .skills-grid3, .skills-grid4{
   display:grid;
@@ -451,8 +448,6 @@ SKILLS
   margin-bottom:30px;
   position:relative;
   left: 50%;
-
-  /* top:50%; */
   transform:translateX(-50%);
 }
 :is(.skills-grid1, .skills-grid2, .skills-grid3, .skills-grid4) > *{
