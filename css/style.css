@@ -14,6 +14,7 @@
   /* --underline:#84c2ff; */
   /* --underline:#9A4AFF; */
   --underline:#30B2FF;
+  /* --underline:#C1FF9B; */
   --name:#9491FF;
 }
 
@@ -139,8 +140,8 @@ li{
 .nav-name{
   position:fixed;
   left:5%;
-  background-color:orange;
-  border:0.5px solid gray;
+  background-color:#FFD57D;
+  /* background-color:var(--cta); */
   /* top:2%; */
 }
 .nav-controls{
@@ -606,6 +607,28 @@ CONTACT
   top:50%;
   transform:translate(-50%, -50%);
   text-align:center;
+}
+.contact-icon{
+  width:8vw;
+  padding:10px;
+  border-radius:15px;
+  filter:opacity(0.8);
+  /* filter:grayscale(1); */
+}
+.contact-icon:hover{
+  /* background-color:var(--cta); */
+  filter:opacity(1);
+  /* filter:blur(.7); */
+  cursor:pointer
+}
+.other-contact{
+  display:flex;
+  justify-content:center;
+  gap:4vw;
+  margin-top:4vh;
+}
+.contact-item{
+  width:fit-content;
 }
 
 

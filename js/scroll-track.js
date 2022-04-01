@@ -88,3 +88,9 @@ $(".ttt").on('click', function(){
 $(".ttt-repo").on('click', function(){
     window.open('https://github.com/cal1co/tic-tac-toe', '_blank')
 })
+$(".contact-git").on('click', function(){
+    window.open('https://github.com/cal1co', '_blank')
+})
+$(".linkedin").on('click', function(){
+    window.open('https://www.linkedin.com/in/alex-king2/', '_blank')
+})

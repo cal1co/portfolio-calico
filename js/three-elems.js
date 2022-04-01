@@ -227,9 +227,7 @@ let darkmode = (env) => {
         $(".skill").css('background-color', 'white')
         $(".project").css('background-color', 'white')
         butt.css('color', 'black')
-
         scene.background = new THREE.Color(params.sky.day)
-
     }
 }
 
