@@ -244,8 +244,8 @@ canvas:active{
 /* 
 ABOUT 
 */
-.about, .projects{
-  margin-top:15vh;
+.about, .projects,.skills{
+  margin-top:10vh;
 }
 .about, .skills{
   min-height:80vh;
@@ -412,7 +412,7 @@ ABOUT
 SKILLS
 */
 .skills{
-  height:80vh;
+  height:fit-content;
 }
 .skill-img{
   /* aspect-ratio:1/1; */
