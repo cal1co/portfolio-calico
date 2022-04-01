@@ -609,10 +609,15 @@ CONTACT
   text-align:center;
 }
 .contact-icon{
-  width:8vw;
+  width:7vw;
+  height:auto;
+  /* height:7vw; */
   padding:10px;
   border-radius:15px;
   filter:opacity(0.8);
+  position:relative;
+  top:50%;
+  transform:translateY(-50%)
   /* filter:grayscale(1); */
 }
 .contact-icon:hover{
@@ -629,6 +634,8 @@ CONTACT
 }
 .contact-item{
   width:fit-content;
+  height:auto;
+  border-radius:30px;
 }
 
 
