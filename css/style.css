@@ -234,7 +234,7 @@ canvas:active{
 /* 
 ABOUT 
 */
-.about, .projects,.skills{
+.about, .projects,.skills, .contact{
   margin-top:10vh;
 }
 .about, .skills{
@@ -583,7 +583,7 @@ CONTACT
 
 
 .footer{
-  height:20vh;
+  height:100vh;
 }
 
 .dot{

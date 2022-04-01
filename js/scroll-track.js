@@ -1,7 +1,7 @@
 import $ from 'jquery'
 
 $(window).scroll(function(){
-    let endLine = $(window).scrollTop() - 60
+    let endLine = $(window).scrollTop() - (window.innerHeight/10)
     if ($("#about").offset().top > endLine){
         $(".nav-about").children().addClass('selected')
         $(".nav-skills").children().removeClass('selected')
@@ -41,17 +41,13 @@ $(window).scroll(function(){
 
 
         // $(".html").addClass("drop1")
-    } else if ($("#projects").offset().top > endLine) {
+    } else if (($("#projects").offset().top + (window.innerHeight))> endLine) {
         $(".nav-about").children().removeClass('selected')
         $(".nav-skills").children().removeClass('selected')
         $(".nav-projects").children().addClass('selected')
         $(".nav-contact").children().removeClass('selected')
-        // $(".proj1").addClass('drop1')
-        // $(".proj2").addClass('drop2')
-        // $(".proj3").addClass('drop3')
-        // $(".proj4").addClass('drop4')
 
-    } else if ($("#contact").offset().top > endLine) {
+    } else if ($("#contact").position().top > endLine) {
         $(".nav-about").children().removeClass('selected')
         $(".nav-skills").children().removeClass('selected')
         $(".nav-projects").children().removeClass('selected')
