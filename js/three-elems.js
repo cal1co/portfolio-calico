@@ -211,7 +211,7 @@ $(".go-up").on('click', function(){
 
 })
 let darkmode = (env) => {
-    if (env){ // light
+    if (env){ // from light
         $('body').addClass('dark-body')
         $('.nav-butt').css('color', 'white')
         $(".go-up").css('background-color', 'white')
@@ -219,9 +219,9 @@ let darkmode = (env) => {
         $(".skill").css('background-color', 'slateblue')
         $(".project").css('background-color', 'slateblue')
         butt.css('color', 'white')
-        $(".contact-item").css('background-color', 'white')
+        $(".contact-item").css('background-color', 'rgba(255, 255, 255, .85)')
         scene.background = new THREE.Color(params.sky.night)
-    } else { // dark
+    } else { // from dark
         $('body').removeClass('dark-body')
         $('.nav-butt').css('color', 'black')
         $('nav').css('background', 'white')
@@ -229,7 +229,6 @@ let darkmode = (env) => {
         $(".project").css('background-color', 'white')
         butt.css('color', 'black')
         $(".contact-item").css('background-color', 'none')
-
         scene.background = new THREE.Color(params.sky.day)
     }
 }
