@@ -94,3 +94,6 @@ $(".contact-git").on('click', function(){
 $(".linkedin").on('click', function(){
     window.open('https://www.linkedin.com/in/alex-king2/', '_blank')
 })
+$(".twitter").on('click', function(){
+    window.open('https://www.twitter.com/8CAL1CO', '_blank')
+})

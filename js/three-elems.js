@@ -219,7 +219,7 @@ let darkmode = (env) => {
         $(".skill").css('background-color', 'slateblue')
         $(".project").css('background-color', 'slateblue')
         butt.css('color', 'white')
-        $(".contact-item").css('background-color', 'rgba(255, 255, 255, .85)')
+        document.documentElement.style.setProperty('--underline', '#787AEB')
         scene.background = new THREE.Color(params.sky.night)
     } else { // from dark
         $('body').removeClass('dark-body')
@@ -228,7 +228,7 @@ let darkmode = (env) => {
         $(".skill").css('background-color', 'white')
         $(".project").css('background-color', 'white')
         butt.css('color', 'black')
-        $(".contact-item").css('background-color', 'none')
+        document.documentElement.style.setProperty('--underline', '#7D9FF5')
         scene.background = new THREE.Color(params.sky.day)
     }
 }

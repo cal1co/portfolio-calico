@@ -11,10 +11,8 @@
   --about-6:#71DEA2;
   /* --cta:#D11149; */
   --cta:#3E52FF;
-  /* --underline:#84c2ff; */
-  /* --underline:#9A4AFF; */
-  --underline:#30B2FF;
-  /* --underline:#C1FF9B; */
+  --underline:#7D9FF5;
+  /* --underline:#787AEB; */
   --name:#9491FF;
 }
 
@@ -140,7 +138,7 @@ li{
 .nav-name{
   position:fixed;
   left:5%;
-  background-color:#FFD57D;
+  background-color:orange;
   /* background-color:var(--cta); */
   /* top:2%; */
 }
@@ -247,7 +245,7 @@ canvas:active{
 /* 
 ABOUT 
 */
-.about, .projects,.skills, .contact{
+.about, .projects,.skills, .contact, .footer{
   margin-top:10vh;
 }
 .about, .skills{
@@ -571,7 +569,7 @@ CONTACT
   font-size:clamp(1rem, 3vw, 1.7rem);
 }
 .contact-butt{
-  margin-top:5vh;
+  margin-top:10vh;
   position:relative;
   display:flex;
   left:50%;
@@ -607,17 +605,20 @@ CONTACT
   top:50%;
   transform:translate(-50%, -50%);
   text-align:center;
+  font-size:2em;
+  font-weight:400;
 }
 .contact-icon{
-  width:7vw;
+  width:5vw;
   height:auto;
   /* height:7vw; */
   padding:10px;
   border-radius:15px;
-  filter:opacity(0.8);
+  filter:grayscale(0.9);
   position:relative;
   top:50%;
-  transform:translateY(-50%)
+  transform:translateY(-50%);
+  padding:7vh;
   /* filter:grayscale(1); */
 }
 .contact-icon:hover{
@@ -640,7 +641,8 @@ CONTACT
 
 
 .footer{
-  height:100vh;
+  height:fit-content;
+  background-color:var(--underline);
 }
 
 .dot{
