@@ -465,6 +465,7 @@ SKILLS
   /* box-shadow: 1px 2px; */
   box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
 }
+
 :is(.skills-grid1, .skills-grid2, .skills-grid3, .skills-grid4) > *:hover{
   transform:translate(-100%, -52%);
 }

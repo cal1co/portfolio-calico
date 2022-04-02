@@ -217,6 +217,7 @@ let darkmode = (env) => {
         $(".go-up").css('background-color', 'white')
         $('nav').css('background', 'black')
         $(".skill").css('background-color', 'slateblue')
+        $(".skill").css('box-shadow', '12px 12px 2px 1px rgba(255, 130, 255, .2)')
         $(".project").css('background-color', 'slateblue')
         butt.css('color', 'white')
         document.documentElement.style.setProperty('--underline', '#787AEB')
@@ -229,6 +230,8 @@ let darkmode = (env) => {
         $(".project").css('background-color', 'white')
         butt.css('color', 'black')
         document.documentElement.style.setProperty('--underline', '#7D9FF5')
+        $(".skill").css('box-shadow', '12px 12px 2px 1px rgba(0, 0, 255, .2)')
+
         scene.background = new THREE.Color(params.sky.day)
     }
 }
