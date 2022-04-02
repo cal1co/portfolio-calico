@@ -570,6 +570,7 @@ CONTACT
 }
 .contact-butt{
   margin-top:10vh;
+  margin-bottom:20vh;
   position:relative;
   display:flex;
   left:50%;
