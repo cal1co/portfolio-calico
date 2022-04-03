@@ -540,7 +540,7 @@ PROJECTS
 .project:hover{
   cursor:pointer;
   transform:translateY(-1%);
-  box-shadow: 12px 12px 2px 1px #838cd1;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .4);
 }
 .project:hover > div > .project-title{
   text-decoration:underline;
