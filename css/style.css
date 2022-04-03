@@ -539,9 +539,12 @@ PROJECTS
 }
 .project:hover{
   cursor:pointer;
+  transform:translateY(-1%);
+  box-shadow: 12px 12px 2px 1px #838cd1;
 }
 .project:hover > div > .project-title{
   text-decoration:underline;
+  color:var(--cta)
 }
 .project-tag{
   font-size:clamp(0.5rem, 2.5vw, 1rem)
@@ -562,11 +565,23 @@ PROJECTS
 }
 .site:hover{
   background:var(--cta);
-
   color:white;
 }
-
-
+.stack-img{
+  height:3vh;
+  width:auto;
+  display:inline-flex;
+  /* align-content:center; */
+  position:relative;
+  /* top:50%; */
+  /* transform:translateY(-50%) */
+}
+.git-site{
+  /* position:relative; */
+  /* display:flex; */
+  /* justify-items:baseline */
+  /* top:40%; */
+}
 
 
 /* 
