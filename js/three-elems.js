@@ -210,28 +210,34 @@ $(".go-up").on('click', function(){
     }
 
 })
+let bod = $('body')
+let navButt = $('.nav-butt')
+let goUp = $(".go-up")
+let nav = $('nav')
+let skill = $(".skill")
+let proj = $(".project")
+
 let darkmode = (env) => {
     if (env){ // from light
-        $('body').addClass('dark-body')
-        $('.nav-butt').css('color', 'white')
-        $(".go-up").css('background-color', 'white')
-        $('nav').css('background', 'black')
-        $(".skill").css('background-color', 'slateblue')
-        $(".skill").css('box-shadow', '12px 12px 2px 1px rgba(255, 130, 255, .2)')
-        $(".project").css('background-color', 'slateblue')
+        nav.css('background', 'black')
+        bod.addClass('dark-body')
+        navButt.css('color', 'white')
+        goUp.css('background-color', 'white')
+        skill.css('background-color', 'slateblue')
+        skill.css('box-shadow', '12px 12px 2px 1px rgba(255, 130, 255, .2)')
+        proj.css('background-color', 'slateblue')
         butt.css('color', 'white')
         document.documentElement.style.setProperty('--underline', '#787AEB')
         scene.background = new THREE.Color(params.sky.night)
     } else { // from dark
-        $('body').removeClass('dark-body')
-        $('.nav-butt').css('color', 'black')
-        $('nav').css('background', 'white')
-        $(".skill").css('background-color', 'white')
-        $(".project").css('background-color', 'white')
+        bod.removeClass('dark-body')
+        navButt.css('color', 'black')
+        nav.css('background', 'white')
+        skill.css('background-color', 'white')
+        skill.css('box-shadow', '12px 12px 2px 1px rgba(0, 0, 255, .2)')
+        proj.css('background-color', 'white')
         butt.css('color', 'black')
         document.documentElement.style.setProperty('--underline', '#7D9FF5')
-        $(".skill").css('box-shadow', '12px 12px 2px 1px rgba(0, 0, 255, .2)')
-
         scene.background = new THREE.Color(params.sky.day)
     }
 }
