@@ -216,6 +216,7 @@ let goUp = $(".go-up")
 let nav = $('nav')
 let skill = $(".skill")
 let proj = $(".project")
+let siteButt = $(".site")
 
 let darkmode = (env) => {
     if (env){ // from light
@@ -227,6 +228,7 @@ let darkmode = (env) => {
         skill.css('box-shadow', '12px 12px 2px 1px rgba(255, 130, 255, .2)')
         proj.css('background-color', 'slateblue')
         butt.css('color', 'white')
+        siteButt.css('color', 'white')
         document.documentElement.style.setProperty('--underline', '#787AEB')
         scene.background = new THREE.Color(params.sky.night)
     } else { // from dark
@@ -237,6 +239,8 @@ let darkmode = (env) => {
         skill.css('box-shadow', '12px 12px 2px 1px rgba(0, 0, 255, .2)')
         proj.css('background-color', 'white')
         butt.css('color', 'black')
+        siteButt.css('color', 'black')
+
         document.documentElement.style.setProperty('--underline', '#7D9FF5')
         scene.background = new THREE.Color(params.sky.day)
     }
