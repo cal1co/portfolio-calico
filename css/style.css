@@ -632,7 +632,7 @@ CONTACT
   /* background:#EB46BF; */
   background:var(--cta);
 }
-.contact-butt:hover > p {
+.contact-butt > p {
   color:white;
 }
 .mail-link{
