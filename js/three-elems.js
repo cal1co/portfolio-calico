@@ -217,6 +217,7 @@ let nav = $('nav')
 let skill = $(".skill")
 let proj = $(".project")
 let siteButt = $(".site")
+let stackImg = $(".stack-img")
 
 let darkmode = (env) => {
     if (env){ // from light

@@ -573,17 +573,13 @@ PROJECTS
   width:auto;
   display:inline-flex;
   position:relative;
-  border:0.5px solid black;
+  border:1px solid black;
+  border-bottom:2px solid black;
   border-radius:20%;
   background:white;
   padding:5px;
 }
-.git-site{
-  /* position:relative; */
-  /* display:flex; */
-  /* justify-items:baseline */
-  /* top:40%; */
-}
+
 
 
 /* 
@@ -593,8 +589,6 @@ CONTACT
   height:fit-content;
 }
 .business-card{
-  /* display:flex;
-  justify-content: center; */
   height:fit-content;
   width:fit-content;
   position:relative;
@@ -629,7 +623,6 @@ CONTACT
   text-align:center;
 }
 .contact-butt:hover{
-  /* background:#EB46BF; */
   background:var(--cta);
 }
 .contact-butt > p {
