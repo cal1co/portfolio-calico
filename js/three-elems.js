@@ -37,19 +37,19 @@ const params = {
 
 // Scene
 const scene = new THREE.Scene()
-// scene.background = new THREE.Color(params.sky.day)
-const texture = new THREE.TextureLoader().load( "cloud-back.jpg" );
-texture.wrapS = THREE.RepeatWrapping;
-texture.wrapT = THREE.RepeatWrapping;
-texture.repeat.set(1, 1);
-scene.background = texture
+scene.background = new THREE.Color(params.sky.day)
+// const texture = new THREE.TextureLoader().load( "cloud-back.jpg" );
+// texture.wrapS = THREE.RepeatWrapping;
+// texture.wrapT = THREE.RepeatWrapping;
+// texture.repeat.set(1, 1);
+// scene.background = texture
 
 /**
  * Object
  */
 const geometry = new THREE.SphereGeometry(2, 128, 64)
 // const geometry = new THREE.BoxGeometry(1, 1, 1)
-const material = new THREE.MeshToonMaterial({ color: params.planet.day, wireframe:false })
+const material = new THREE.MeshToonMaterial({ color: params.planet.day, wireframe:true })
 const mesh = new THREE.Mesh(geometry, material)
 mesh.position.y = -2
 scene.add(mesh)
