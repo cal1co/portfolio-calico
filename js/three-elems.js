@@ -207,12 +207,14 @@ $(".go-up").on('click', function(){
         $(this).children().addClass('sun-moon')
         darkmode(true)
         sun = false
+        localStorage.setItem('dark', false);
     } 
     else{
         $(this).children().removeClass('sun-moon')
         $(this).children().addClass('moon-sun')
         darkmode(false)
         sun = true
+        localStorage.setItem('dark', true);
     }
 
 })
@@ -253,8 +255,14 @@ let darkmode = (env) => {
     }
 }
 
-
-
+// Set darkmode
+const darkSet = localStorage.getItem('dark');
+if (darkSet === 'false'){
+    darkmode(true)
+    $(".go-up").children().removeClass('moon-sun')
+    $(".go-up").children().addClass('sun-moon')
+    sun = false
+}
 
 
 
