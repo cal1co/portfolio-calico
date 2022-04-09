@@ -218,14 +218,14 @@ $(".go-up").on('click', function(){
     }
 
 })
-let bod = $('body')
-let navButt = $('.nav-butt')
-let goUp = $(".go-up")
-let nav = $('nav')
-let skill = $(".skill")
-let proj = $(".project")
-let siteButt = $(".site")
-let stackImg = $(".stack-img")
+const bod = $('body')
+const navButt = $('.nav-butt')
+const goUp = $(".go-up")
+const nav = $('nav')
+const skill = $(".skill")
+const proj = $(".project")
+const siteButt = $(".site")
+const stackImg = $(".stack-img")
 
 let darkmode = (env) => {
     if (env){ // from light
@@ -263,6 +263,4 @@ if (darkSet === 'false'){
     $(".go-up").children().addClass('sun-moon')
     sun = false
 }
-
-
 
