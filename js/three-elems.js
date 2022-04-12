@@ -16,8 +16,6 @@ window.addEventListener('mousemove', (e) => {
 })
 
 
-
-
 // THREE WORLD
 const canvas = document.querySelector('canvas.world')
 const params = {
