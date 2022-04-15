@@ -863,10 +863,29 @@ var time = 0;
 var lastFrame = Date.now();
 var thisFrame;
 var dT = 0;
+let canvasActive = false
 
 function draw(){
 	// stats.begin();
 	
+    renderer.setSize(sizes.width, sizes.height)
+    if (sizes.height < window.innerHeight * 0.50){
+        sizes.height = sizes.height += 10
+        camera.aspect = sizes.width / sizes.height
+        camera.updateProjectionMatrix()
+
+    } 
+    else if (sizes.width < window.innerWidth * 0.9){
+        sizes.width = sizes.width += 12
+        camera.aspect = sizes.width / sizes.height
+        camera.updateProjectionMatrix()
+    }
+    if (canvasActive){
+        camera.position.x = cursor.x / 10
+        camera.position.y = cursor.y / 20
+    } 
+
+
 	//Update time
 	thisFrame = Date.now();
 	dT = (thisFrame - lastFrame)/200.0;
@@ -891,6 +910,7 @@ draw();
 
 
 scene.background = new THREE.Color('#ffffff')
+
 const butt = $(".contact-butt")
 
 // DARK MODE 

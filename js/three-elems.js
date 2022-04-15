@@ -181,9 +181,9 @@ const animation = () => {
 
     camera.position.set(-30, 5, 50);
 
-    requestAnimationFrame(animation)
+    // requestAnimationFrame(animation)
 
 
 }
-animation()
+// animation()
 
