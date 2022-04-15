@@ -5,6 +5,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import $ from 'jquery'
 import dat from 'dat.gui'
 
+
 //Update of
 //https://codepen.io/al-ro/pen/jJJygQ
 //Added lighting, translucency and movement on an infinite rounded world
@@ -15,6 +16,21 @@ import dat from 'dat.gui'
 //https://en.wikibooks.org/wiki/GLSL_Programming/Unity/Translucent_Surfaces
 
 //There are two scenes: one for the sky/sun and another for the grass. The sky is rendered without depth information on a plane geometry that fills the screen. Automatic clearing is disabled and after the sky has been rendered, we draw the grass scene on top of the background. Both scenes share a camera and light direction information.
+
+const params = {
+    sky:{
+        day:'#ffffff',
+        // night:'#080C17'
+        night:'#080C17'
+        // night:'#3D4259'
+    }, 
+    planet:{
+        // day:'0x3BF560',
+        // day:'0x3BDFFF',
+        day:'#eeaaff',
+        // night:
+    }
+}
 
 const canvas = document.querySelector('canvas.world')
 
@@ -45,6 +61,12 @@ const speed = 0;
 //The geometry never leaves a box of width*width around (0, 0)
 //But we track where in space the camera would be globally
 const pos = new THREE.Vector2(0.01, 0.01);
+
+const sizes = {
+    width: window.innerWidth * 0.45,
+    // height: window.innerHeight * 0.50
+    height: 10
+}
 
 //Number of blades
 const instances = 40000;
@@ -866,3 +888,78 @@ function draw(){
 }
 
 draw();
+
+
+scene.background = new THREE.Color('#ffffff')
+const butt = $(".contact-butt")
+
+// DARK MODE 
+
+let sun = true
+$(".go-up").on('click', function(){
+    if (sun){
+        $(this).children().removeClass('moon-sun')
+        $(this).children().addClass('sun-moon')
+        darkmode(true)
+        sun = false
+        localStorage.setItem('dark', false);
+    } 
+    else{
+        $(this).children().removeClass('sun-moon')
+        $(this).children().addClass('moon-sun')
+        darkmode(false)
+        sun = true
+        localStorage.setItem('dark', true);
+    }
+
+})
+const bod = $('body')
+const navButt = $('.nav-butt')
+const goUp = $(".go-up")
+const nav = $('nav')
+const skill = $(".skill")
+const proj = $(".project")
+const siteButt = $(".site")
+const stackImg = $(".stack-img")
+const title = $('.header-container').children()
+
+
+let darkmode = (env) => {
+    if (env){ // from light
+        nav.css('background', 'black')
+        bod.addClass('dark-body')
+        navButt.css('color', 'white')
+        goUp.css('background-color', 'white')
+        skill.css('background-color', 'slateblue')
+        skill.css('box-shadow', '12px 12px 2px 1px rgba(255, 130, 255, .2)')
+        proj.css('background-color', 'slateblue')
+        butt.css('color', 'white')
+        siteButt.css('color', 'white')
+        title.css('color','white')
+        document.documentElement.style.setProperty('--underline', '#787AEB')
+        scene.background = new THREE.Color(params.sky.night)
+    } else { // from dark
+        bod.removeClass('dark-body')
+        navButt.css('color', 'black')
+        nav.css('background', 'white')
+        skill.css('background-color', 'white')
+        skill.css('box-shadow', '12px 12px 2px 1px rgba(0, 0, 255, .2)')
+        proj.css('background-color', 'white')
+        butt.css('color', 'black')
+        siteButt.css('color', 'black')
+        title.css('color','black')
+
+        document.documentElement.style.setProperty('--underline', '#7D9FF5')
+        scene.background = new THREE.Color(params.sky.day)
+    }
+}
+
+// Set darkmode
+const darkSet = localStorage.getItem('dark');
+if (darkSet === 'false'){
+    darkmode(true)
+    $(".go-up").children().removeClass('moon-sun')
+    $(".go-up").children().addClass('sun-moon')
+    sun = false
+}
+
