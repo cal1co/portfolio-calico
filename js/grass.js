@@ -176,6 +176,14 @@ const backgroundMaterial = new THREE.ShaderMaterial({
 		uniform float fov;
 
 		const vec3 skyColour = 0.6 * vec3(0.02, 0.2, 0.9);
+		// const vec3 skyColour = vec3(0.031,0.047,0.09);
+
+
+
+            // COLOUR!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
 		//Darken sky when looking up
 		vec3 getSkyColour(vec3 rayDir){
 			return mix(0.35*skyColour, skyColour, pow(1.0-rayDir.y, 4.0));
@@ -257,6 +265,8 @@ backgroundMaterial.depthWrite = false;
 var backgroundGeometry = new THREE.PlaneBufferGeometry(2, 2, 1, 1);
 var background = new THREE.Mesh(backgroundGeometry, backgroundMaterial);
 backgroundScene.add(background);
+backgroundScene.remove(background);
+
 
 renderer.autoClear = false;
 

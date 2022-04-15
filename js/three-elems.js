@@ -216,6 +216,8 @@ const skill = $(".skill")
 const proj = $(".project")
 const siteButt = $(".site")
 const stackImg = $(".stack-img")
+const title = $('.header-container').children()
+
 
 let darkmode = (env) => {
     if (env){ // from light
@@ -228,6 +230,7 @@ let darkmode = (env) => {
         proj.css('background-color', 'slateblue')
         butt.css('color', 'white')
         siteButt.css('color', 'white')
+        title.css('color','white')
         document.documentElement.style.setProperty('--underline', '#787AEB')
         scene.background = new THREE.Color(params.sky.night)
     } else { // from dark
@@ -239,6 +242,7 @@ let darkmode = (env) => {
         proj.css('background-color', 'white')
         butt.css('color', 'black')
         siteButt.css('color', 'black')
+        title.css('color','black')
 
         document.documentElement.style.setProperty('--underline', '#7D9FF5')
         scene.background = new THREE.Color(params.sky.day)
