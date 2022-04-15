@@ -61,16 +61,7 @@ const sizes = {
     height: 10
 }
 
-window.addEventListener('resize', () => {
-    
-    // Update sizes
-    sizes.width = window.innerWidth * 0.9
-    sizes.height = window.innerHeight * 0.50
-    // Update camera 
-    camera.aspect = sizes.width / sizes.height
-    camera.updateProjectionMatrix()
-    renderer.setSize(sizes.width, sizes.height)
-})
+
 
 
 const camera = new THREE.PerspectiveCamera(20, sizes.width / sizes.height, 0.1, 100)
@@ -188,6 +179,7 @@ const animation = () => {
     // Contact Butt
 
 
+    camera.position.set(-30, 5, 50);
 
     requestAnimationFrame(animation)
 
