@@ -158,7 +158,6 @@ const animation = () => {
         sizes.height = sizes.height += 10
         camera.aspect = sizes.width / sizes.height
         camera.updateProjectionMatrix()
-
     } 
     else if (sizes.width < window.innerWidth * 0.9){
         sizes.width = sizes.width += 12

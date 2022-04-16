@@ -112,7 +112,7 @@ const distance = 1500;
 const FOV = 50;//2 * Math.atan(window.innerHeight / distance) * 180 / Math.PI;
 const camera = new THREE.PerspectiveCamera(FOV, window.innerWidth / window.innerHeight, 1, distance);
 
-camera.position.set(-30, 5, 70);
+camera.position.set(-30, 5, 50);
 camera.lookAt(new THREE.Vector3(0,0,0));
 
 scene.add(camera);
@@ -982,4 +982,3 @@ if (darkSet === 'false'){
     $(".go-up").children().addClass('sun-moon')
     sun = false
 }
-
