@@ -917,7 +917,7 @@ const llamaLoader = new GLTFLoader()
 
 llamaLoader.load(
 
-'/models/llama2/scene.gltf',
+'public/models/llama2/scene.gltf',
 	// called when the resource is loaded
 	function ( gltf ) {
 
