@@ -5,7 +5,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import $ from 'jquery'
 import dat from 'dat.gui'
-
+// import llama from '/public/models/llama2/scene.gltf'
 
 //Update of
 //https://codepen.io/al-ro/pen/jJJygQ
@@ -917,7 +917,7 @@ const llamaLoader = new GLTFLoader()
 
 llamaLoader.load(
 
-'public/models/llama2/scene.gltf',
+'models/llama2/scene.gltf',
 	// called when the resource is loaded
 	function ( gltf ) {
 
