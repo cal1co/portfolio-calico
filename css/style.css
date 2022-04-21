@@ -580,7 +580,22 @@ PROJECTS
   background:white;
   padding:5px;
 }
-
+.git-site{
+  background-color:var(--cta);
+  border:none;
+  border-radius:20px;
+  color:white;
+  /* margin-inline:2em; */
+  margin-top:1em;
+  padding:0.3em;
+  padding-inline:1em;
+  opacity:0.8;
+  font-size:1rem;
+}
+.git-site:hover{
+  opacity:1;
+  cursor:pointer;
+}
 
 
 /* 
