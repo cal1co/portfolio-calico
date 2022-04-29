@@ -113,9 +113,10 @@ nav{
   position:sticky;
   top:0;
   z-index: 999;
-  border-bottom-left-radius:40px 10%;
-  border-bottom-right-radius:40px 10%;
+  /* border-bottom-left-radius:40px 10%; */
+  /* border-bottom-right-radius:40px 10%; */
   background:white;
+  box-shadow:rgba(0, 0, 0, 0.075) 0px 5px 10px;
 }
 .page-controls{
   outline:2px solid crimson;
