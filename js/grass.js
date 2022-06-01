@@ -167,11 +167,11 @@ function onWindowResize(){
 
 //Get alpha map and blade texture
 //These have been taken from "Realistic real-time grass rendering" by Eddie Lee, 2010
-var loader = new THREE.TextureLoader();
+let loader = new THREE.TextureLoader();
 loader.crossOrigin = '';
-var grassTexture = loader.load( 'https://al-ro.github.io/images/grass/blade_diffuse.jpg' );
-var alphaMap = loader.load( 'https://al-ro.github.io/images/grass/blade_alpha.jpg' );
-var noiseTexture = loader.load( 'https://al-ro.github.io/images/grass/perlinFbm.jpg' );
+let grassTexture = loader.load( 'https://al-ro.github.io/images/grass/blade_diffuse.jpg' );
+let alphaMap = loader.load( 'https://al-ro.github.io/images/grass/blade_alpha.jpg' );
+let noiseTexture = loader.load( 'https://al-ro.github.io/images/grass/perlinFbm.jpg' );
 noiseTexture.wrapS = THREE.RepeatWrapping;
 noiseTexture.wrapT = THREE.RepeatWrapping;
 
@@ -915,30 +915,30 @@ scene.background = new THREE.Color('#ffffff')
 
 const llamaLoader = new GLTFLoader()
 
-llamaLoader.load(
+// llamaLoader.load(
 
-'models/llama2/scene.gltf',
-	// called when the resource is loaded
-	function ( gltf ) {
+// 'models/llama2/scene.gltf',
+// 	// called when the resource is loaded
+// 	function ( gltf ) {
 
-    scene.add( gltf.scene );
+//     scene.add( gltf.scene );
 
-		gltf.animations; // Array<THREE.AnimationClip>
-		gltf.scene; // THREE.Group
-		gltf.scenes; // Array<THREE.Group>
-		gltf.cameras; // Array<THREE.Camera>
-		gltf.asset; // Object
+// 		gltf.animations; // Array<THREE.AnimationClip>
+// 		gltf.scene; // THREE.Group
+// 		gltf.scenes; // Array<THREE.Group>
+// 		gltf.cameras; // Array<THREE.Camera>
+// 		gltf.asset; // Object
 
-	},
-	// called while loading is progressing
-	function ( xhr ) {
-		// console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
-	},
-	// called when loading has errors
-	function ( error ) {
-		// console.log( 'An error happened' );
-	}
-);
+// 	},
+// 	// called while loading is progressing
+// 	function ( xhr ) {
+// 		// console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+// 	},
+// 	// called when loading has errors
+// 	function ( error ) {
+// 		// console.log( 'An error happened' );
+// 	}
+// );
 
 
 const butt = $(".contact-butt")

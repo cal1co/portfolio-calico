@@ -153,21 +153,21 @@ const card = $(".business-card")
 const animation = () => {
     
     // Page load size
-    renderer.setSize(sizes.width, sizes.height)
-    if (sizes.height < window.innerHeight * 0.50){
-        sizes.height = sizes.height += 10
-        camera.aspect = sizes.width / sizes.height
-        camera.updateProjectionMatrix()
-    } 
-    else if (sizes.width < window.innerWidth * 0.9){
-        sizes.width = sizes.width += 12
-        camera.aspect = sizes.width / sizes.height
-        camera.updateProjectionMatrix()
-    }
-    if (canvasActive){
-        camera.position.x = cursor.x / 10
-        camera.position.y = cursor.y / 20
-    } 
+    // renderer.setSize(sizes.width, sizes.height)
+    // if (sizes.height < window.innerHeight * 0.50){
+    //     sizes.height = sizes.height += 10
+    //     camera.aspect = sizes.width / sizes.height
+    //     camera.updateProjectionMatrix()
+    // } 
+    // else if (sizes.width < window.innerWidth * 0.9){
+    //     sizes.width = sizes.width += 12
+    //     camera.aspect = sizes.width / sizes.height
+    //     camera.updateProjectionMatrix()
+    // }
+    // if (canvasActive){
+    //     camera.position.x = cursor.x / 10
+    //     camera.position.y = cursor.y / 20
+    // } 
 
     // const elapsedTime = clock.getElapsedTime()
 
