@@ -61,6 +61,12 @@ $(window).scroll(function(){
         $(".proj3").addClass('drop')
     } else if ($(".proj4").offset().top / 1.2  > endLine){
         $(".proj4").addClass('drop')
+    } else if ($(".proj5").offset().top / 1.2  > endLine){
+        $(".proj5").addClass('drop')
+    } else if ($(".proj6").offset().top / 1.2  > endLine){
+        $(".proj6").addClass('drop')
+    } else if ($(".proj7").offset().top / 1.2  > endLine){
+        $(".proj7").addClass('drop')
     }
 })
 
