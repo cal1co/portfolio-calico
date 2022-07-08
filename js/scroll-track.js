@@ -70,6 +70,26 @@ $(window).scroll(function(){
     }
 })
 
+
+
+$(".mov").on('click', function(){
+    window.open("https://my-movies-client.netlify.app/", '_blank')
+})
+$(".mov-repo").on('click', function(){
+    window.open("https://github.com/cal1co/my-movies-client", '_blank')
+})
+$(".con").on('click', function(){
+    window.open("https://github.com/cal1co/cli-connect-4", '_blank')
+})
+$(".con-repo").on('click', function(){
+    window.open("https://github.com/cal1co/cli-connect-4", '_blank')
+})
+$(".todo").on('click', function(){
+    window.open("https://github.com/cal1co/GO-CLI-TODO", '_blank')
+})
+$(".todo-repo").on('click', function(){
+    window.open("https://github.com/cal1co/GO-CLI-TODO", '_blank')
+})
 $(".tsuru").on('click', function(){
     window.open("https://blissful-borg-f2769c.netlify.app/", '_blank')
 })
