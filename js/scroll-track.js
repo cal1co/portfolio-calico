@@ -67,11 +67,35 @@ $(window).scroll(function(){
         $(".proj6").addClass('drop')
     } else if ($(".proj7").offset().top / 1.2  > endLine){
         $(".proj7").addClass('drop')
+    } else if ($(".proj8").offset().top / 1.2  > endLine){
+        $(".proj8").addClass('drop')
+    } else if ($(".proj9").offset().top / 1.2  > endLine){
+        $(".proj9").addClass('drop')
+    } else if ($(".proj10").offset().top / 1.2  > endLine){
+        $(".proj9").addClass('drop')
     }
 })
 
 
 
+$(".jpi").on('click', function(){
+    window.open("https://github.com/cal1co/jpi", '_blank')
+})
+$(".jpi-repo").on('click', function(){
+    window.open("https://github.com/cal1co/jpi", '_blank')
+})
+$(".pyg").on('click', function(){
+    window.open("https://github.com/cal1co/py-rpg", '_blank')
+})
+$(".pyg-repo").on('click', function(){
+    window.open("https://github.com/cal1co/py-rpg", '_blank')
+})
+$(".alg").on('click', function(){
+    window.open("https://algo-vis-tool.netlify.app/", '_blank')
+})
+$(".alg-repo").on('click', function(){
+    window.open("https://github.com/cal1co/algo-vis", '_blank')
+})
 $(".mov").on('click', function(){
     window.open("https://my-movies-client.netlify.app/", '_blank')
 })
